@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="recomendacion1">Recomendaciones de Actividades</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery para simplificar -->
+  <script src="https://unpkg.com/i18next@21.6.3/i18next.min.js"></script> <!-- i18next -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <style>
+    body {
+            background-color: #1a202c;
+            color: #edf2f7;
+            background-image: url('imagenes/fondo.jpg'); ;
+        }
+        .navbar {
+            background-color: #24465c;
+            color: black;
+        }
+
+    h2, h3, h4 {
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #dd9d12 !important;
+    }
+
+    .btn-primary {
+      background-color: #786f5a;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #96948f;
+    }
+
+    footer {
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+    }
+
+    .list-group-item {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .list-group-item:hover {
+      background-color: #333333;
+      transform: scale(1.02);
+    }
+
+    .text-warning {
+      color: #94c150 !important;
+    }
+    .list-group-item {
+  transition: box-shadow 0.3s ease;
+    }
+
+    .list-group-item:hover {
+      box-shadow: 0 0 15px rgba(176, 209, 70, 0.5);
+    }
+    /* Footer */
+    footer {
+            background-color: #061018;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
+  </style>
+</head>
+
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+    <div class="container-fluid">
+        <a href="index.html" class="btn btn-link text-white">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+
+        <a class="navbar-brand" href="#">RecreaPlus</a>
+<!-- Selector de idioma -->
+    <div class="flex justify-center mt-2">
+      <select id="language-selector" class="px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 font-medium text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+          <option value="es" selected>Español</option>
+          <option value="en">English</option>  
+      </select>
+    </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" data-i18n="ini_ini" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#actividades-populares" data-i18n="recomendacion98">Recomendaciones</a></li>
+                <li class="nav-item"><a class="nav-link" href="#nuevas-actividades" data-i18n="recomendacion3">Nuevas actividades para probar</a></li>
+                <li class="nav-item"><a class="nav-link" href="#lugares-eventos" data-i18n="recomendacion4">Enlaces a lugares o eventos locales</a></li>
+                <li class="nav-item"><a class="nav-link" href="#consejos" data-i18n="recomendacion5">Consejos sobre actividades recreativas</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  <!--scrip para la internalizacion del contenido-->
+<script>
+    //Función para cargar el archivo XML -->
+    function loadTranslations(language) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "intermacional.xml", true);
+        xhr.onreadystatechange = function () {
+         if (xhr.readyState === 4 && xhr.status === 200) {
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(xhr.responseText, "application/xml");
+
+            var translations = {};
+            var keys = xmlDoc.getElementsByTagName("key");
+            for (var i = 0; i < keys.length; i++) {
+                var name = keys[i].getAttribute("name");
+                var value = keys[i].getElementsByTagName(language)[0].textContent;
+                translations[name] = value;
+            }
+
+        i18next.init(
+           {
+             lng: language,
+             resources: {
+               [language]: {
+                 translation: translations,
+               },
+             },
+           },
+           function (err, t) {
+                document.querySelectorAll("[data-i18n]").forEach(function (element) {
+                element.innerHTML = t(element.getAttribute("data-i18n"));
+                 });
+            }
+            );
+         }
+        };
+        xhr.send();
+    }   
+
+   // Cambiar idioma con el selector
+   document.getElementById("language-selector").addEventListener("change", function () {
+     loadTranslations(this.value);
+   });
+
+   // Idioma predeterminado al cargar la página
+   window.onload = function () {
+     loadTranslations("es");
+   };
+</script>
+  <!-- Contenido Principal -->
+  <div class="container py-5">
+    <!-- Actividades Populares -->
+    <section id="actividades-populares" class="mb-5">
+      <br><BR><BR>
+      <h2 class="text-center text-warning mb-4 animate__animated animate__fadeInDown" data-i18n="recomendacion6">Actividades Populares Según tu Perfil</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card bg-dark text-white border border-secondary shadow">
+            <img src="imagenes/senderismo.jpeg" class="card-img-top" alt="Senderismo">
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="recomendacion7">Senderismo</h5>
+              <p class="card-text" data-i18n="recomendacion8">Descubre las mejores rutas para explorar la naturaleza.</p>
+              <a href="#" class="btn btn-primary w-100" data-i18n="recomendacion9">Ver Más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-dark text-white border border-secondary shadow">
+            <img src="imagenes/yoga.jpg" class="card-img-top" alt="Clases de Yoga">
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="recomendacion10">Clases de Yoga</h5>
+              <p class="card-text" data-i18n="recomendacion11">Relájate y mejora tu bienestar con estas clases.</p>
+              <a href="#" class="btn btn-primary w-100" data-i18n="recomendacion9">Ver Más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-dark text-white border border-secondary shadow">
+            <img src="imagenes/ciclismo.jpeg" class="card-img-top" alt="Ciclismo">
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="recomendacion12">Ciclismo</h5>
+              <p class="card-text" data-i18n="recomendacion13">Recorre las mejores rutas en bicicleta cerca de ti.</p>
+              <a href="#" class="btn btn-primary w-100" data-i18n="recomendacion9">Ver Más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+      <!-- Nuevas Actividades -->
+      <section id="nuevas-actividades" class="mb-5">
+        <h2 class="text-center mb-4" data-i18n="recomendacion14">Nuevas Actividades para Probar</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="imagenes/cocina.jpg" height="230px" class="card-img-top" alt="Clases de Cocina">
+              <div class="card-body">
+                <h5 class="card-title" data-i18n="recomendacion15">Clases de Cocina</h5>
+                <p class="card-text" data-i18n="recomendacion16">Aprende a preparar platillos deliciosos y explora nuevos sabores.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="imagenes/yoga1.jpeg" height="250px" class="card-img-top" alt="Yoga">
+              <div class="card-body">
+                <h5 class="card-title" data-i18n="recomendacion17">Yoga</h5>
+                <p class="card-text" data-i18n="recomendacion18">Relájate y fortalece tu cuerpo con esta actividad beneficiosa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="imagenes/pintura.jpg" height="250px" class="card-img-top" alt="Pintura">
+              <div class="card-body">
+                <h5 class="card-title" data-i18n="recomendacion19">Pintura</h5>
+                <p class="card-text" data-i18n="recomendacion20">Descubre tu lado artístico y crea obras únicas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     <!-- Enlaces a Lugares o Eventos Locales -->
+     <section id="lugares-eventos" class="mb-5">
+      <h2 class="text-center text-white mb-4" data-i18n="recomendacion21">Enlaces a Lugares o Eventos Locales</h2>
+      <p class="text-center mb-4" data-i18n="recomendacion22">Descubre actividades recreativas emocionantes en tu comunidad. ¡Participa, diviértete y conoce nuevas personas!</p>
+      <ul class="list-group">
+        <li class="list-group-item bg-dark text-white d-flex justify-content-between align-items-center">
+          <span data-i18n="recomendacion23"> Únete a rutas organizadas en la naturaleza o participa en competiciones de ciclismo urbano. ¡Siente la adrenalina mientras exploras nuevos caminos!</span>
+          <a href="#" class="btn btn-outline-primary" data-i18n="recomendacion24">Más Información</a>
+        </li>
+        <li class="list-group-item bg-dark text-white d-flex justify-content-between align-items-center">
+          <span data-i18n="recomendacion25"> Relájate y conecta con la naturaleza en nuestras clases de yoga en parques comunitarios. Ideal para todos los niveles.</span>
+          <a href="#" class="btn btn-outline-primary" data-i18n="recomendacion24">Mas Información</a>
+        </li>
+        <li class="list-group-item bg-dark text-white d-flex justify-content-between align-items-center">
+          <span data-i18n="recomendacion26"> Disfruta de eventos musicales en plazas o parques, donde la música y la buena compañía se unen para crear momentos inolvidables.</span>
+          <a href="#" class="btn btn-outline-primary" data-i18n="recomendacion24">Mas Información</a>
+        </li>
+        <li class="list-group-item bg-dark text-white d-flex justify-content-between align-items-center">
+          <span data-i18n="recomendacion2"> Asiste a representaciones teatrales organizadas por grupos locales. Una excelente manera de apoyar el arte en tu comunidad.</span>
+          <a href="#" class="btn btn-outline-primary" data-i18n="recomendacion24">Más Información</a>
+        </li>
+      </ul>
+    </section>
+    
+
+    <!-- Consejos sobre Actividades Recreativas -->
+    <section id="consejos">
+      <h2 class="text-center  mb-4" data-i18n="recomendacion28">Consejos sobre Actividades Recreativas</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="bg-gray-800 p-4 rounded">
+            <h4 class="text-warning" data-i18n="recomendacion29">Planifica con Anticipación</h4>
+            <p data-i18n="recomendacion30">Antes de participar en una actividad recreativa, es fundamental investigar sobre la misma. Conocer las reglas, el lugar y los horarios te ayudará a disfrutar más. Además, asegúrate de preparar todos los materiales necesarios, ya sea equipo deportivo, materiales de arte o cualquier otro recurso. Hacer una lista puede ser útil para no olvidar nada. Si tu actividad es al aire libre, verifica el pronóstico del tiempo para evitar sorpresas desagradables.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-gray-800 p-4 rounded">
+            <h4 class="text-warning" data-i18n="recomendacion31">Invita a tus Amigos</h4>
+            <p data-i18n="recomendacion32">Las actividades recreativas son mucho más divertidas cuando se comparten con amigos. Invitar a otros puede hacer que la experiencia sea más enriquecedora y memorable. Considera formar grupos para actividades como senderismo, ciclismo o deportes de equipo. Esto no solo hace la actividad más divertida, sino que también fomenta el trabajo en equipo. Si tienes un grupo de amigos que disfrutan de actividades similares, planifica reuniones regulares para mantener la diversión y la conexión.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-gray-800 p-4 rounded">
+            <h4 class="text-warning" data-i18n="recomendacion33">Mantén una Actitud Positiva</h4>
+            <p data-i18n="recomendacion34">Es importante disfrutar del proceso y no enfocarse únicamente en el resultado. La diversión está en el viaje, no solo en la meta. Además, mantén una actitud abierta y flexible ante los cambios o imprevistos que puedan surgir durante la actividad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p data-i18n="footer"> 2025 RecreaPlus | Todos los derechos reservados.</p>
+      <p><a href="mailto:contacto@recreaplus.com" style="color: white;">estefanyMamani@recreaplus.com</a></p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

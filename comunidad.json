@@ -1,0 +1,17 @@
+[
+    {
+        "usuario": "Juana",
+        "actividad": "Natación",
+        "descripcion": "Recomiendo que practiquen natación. Es excelente para mejorar la resistencia, tonificar el cuerpo y es una actividad de bajo impacto."
+    },
+    {
+        "usuario": "Carlos",
+        "actividad": "Senderismo",
+        "descripcion": "El senderismo es perfecto para desconectarse de la rutina y disfrutar de la naturaleza. Las caminatas por montañas y bosques son mi actividad favorita."
+    },
+    {
+        "usuario": "Lucía",
+        "actividad": "Ciclismo",
+        "descripcion": "El ciclismo es ideal para quienes buscan ejercicio cardiovascular y disfrutar de bellos paisajes mientras se ejercitan. ¡Es muy divertido!"
+    }
+]

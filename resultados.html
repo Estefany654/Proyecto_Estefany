@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="resultados2">Resultados - Actividades Recreativas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery para simplificar -->
+    <script src="https://unpkg.com/i18next@21.6.3/i18next.min.js"></script> <!-- i18next -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body {
+            background-color: #1a202c;
+            color: #edf2f7;
+            background-image: url('imagenes/fondo.jpg'); ;
+        }
+        .navbar {
+            background-color: #24465c;
+            color: black;
+        }
+        .card {
+            background-color: #1f1f1f;
+            border: none;
+            color: #ffffff;
+        }
+        .card img {
+            border-radius: 8px;
+        }
+        .chart-container {
+            height: 400px;
+        }
+        /* Footer */
+        footer {
+            background-color: #061018;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
+        .gender-info {
+            display: none; /* Ocultar inicialmente */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+        <div class="container-fluid">
+            <a href="index.html" class="btn btn-link text-white">
+                <i class="bi bi-arrow-left"></i>
+            </a>
+    
+            <a class="navbar-brand" href="#">RecreaPlus</a>
+<!-- Selector de idioma -->
+        <div class="flex justify-center mt-2">
+          <select id="language-selector" class="px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 font-medium text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+              <option value="es" selected>Español</option>
+              <option value="en">English</option>  
+          </select>
+        </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" data-i18n="resultados3" href="#estadisticas">Estadísticas sobre actividades recreativas</a></li>
+                    <li class="nav-item"><a class="nav-link" data-i18n="resultados4" href="#tendencias">Tendencias por edad region y genero</a></li>
+                    <li class="nav-item"><a class="nav-link" data-i18n="resultados5" href="#graficos">Gráficos interactivos</a></li>
+                    <li class="nav-item"><a class="nav-link" data-i18n="resultados6" href="#comparacion">Comparación entre diferentes tipos de actividades</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<!--scrip para la internalizacion del contenido-->
+<script>
+  //Función para cargar el archivo XML -->
+    function loadTranslations(language) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "intermacional.xml", true);
+        xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(xhr.responseText, "application/xml");
+
+            var translations = {};
+            var keys = xmlDoc.getElementsByTagName("key");
+            for (var i = 0; i < keys.length; i++) {
+                var name = keys[i].getAttribute("name");
+                var value = keys[i].getElementsByTagName(language)[0].textContent;
+                translations[name] = value;
+            }
+
+        i18next.init(
+            {
+            lng: language,
+            resources: {
+                [language]: {
+                translation: translations,
+                },
+            },
+            },
+            function (err, t) {
+                document.querySelectorAll("[data-i18n]").forEach(function (element) {
+                element.innerHTML = t(element.getAttribute("data-i18n"));
+                });
+            }
+            );
+        }
+        };
+        xhr.send();
+    }   
+
+    // Cambiar idioma con el selector
+    document.getElementById("language-selector").addEventListener("change", function () {
+    loadTranslations(this.value);
+    });
+
+    // Idioma predeterminado al cargar la página
+    window.onload = function () {
+    loadTranslations("es");
+    };
+</script>
+
+<header class="py-5 text-center">
+    <div class="container">
+        <br><br><br>
+        <h1 data-i18n="resultados7">Resultados de Actividades Favoritas</h1>
+        <p data-i18n="resultados8">Explora estadísticas, tendencias, gráficos interactivos y comparaciones.</p>
+    </div>
+</header>
+
+<section id="estadisticas" class="py-5">
+    <div class="container">
+        <h2 class="mb-4" data-i18n="resultados9">Estadísticas sobre actividades favoritas</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagenes/deportecoll.webp" class="card-img-top" alt="Actividad">
+                    <div class="card-body">
+                        <h5 class="card-title" data-i18n="resultados10">Deporte</h5>
+                        <p class="card-text" data-i18n="resultados11">El 40% de las personas prefieren actividades deportivas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagenes/arte.webp" class="card-img-top" height="300px" alt="Actividad">
+                    <div class="card-body">
+                        <h5 class="card-title" data-i18n="resultados12">Arte</h5>
+                        <p class="card-text" data-i18n="resultados13">El 30% disfruta de actividades artísticas y creativas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagenes/naturaleza.jpeg" class="card-img-top" alt="Actividad">
+                    <div class="card-body">
+                        <h5 class="card-title" data-i18n="resultados14">Naturaleza</h5>
+                        <p class="card-text" data-i18n="resultados15">El 20% opta por actividades al aire libre.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tendencias" class="py-5  text-white">
+    <div class="container">
+        <h2 class="mb-4 text-center" data-i18n="resultados16">Tendencias por Edad, Región y Género</h2>
+        <div class="row">
+            <!-- Jóvenes (18-25 años) -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-secondary text-white">
+                    <img src="imagenes/dep_extremo.jpg" class="card-img-top" alt="Jóvenes en tecnología">
+                    <div class="card-body">
+                        <h5 class="card-title" data-i18n="resultados17">Jóvenes (18-25 años)</h5>
+                        <p class="card-text" data-i18n="resultados18">Este grupo prefiere actividades tecnológicas y deportes extremos. Son usuarios activos de redes sociales y buscan experiencias innovadoras.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Jóvenes Adultos (26-30 años) -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-secondary text-white">
+                    <img src="imagenes/desarrollo.jpeg" class="card-img-top" alt="Jóvenes adultos en actividades sociales">
+                    <div class="card-body">
+                        <h5 class="card-title" data-i18n="resultados19">Jóvenes Adultos (26-30 años)</h5>
+                        <p class="card-text" data-i18n="resultados20">Los jóvenes adultos tienden a enfocarse en el desarrollo profesional y la estabilidad. Participan en actividades culturales y sociales.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Adultos (31-45 años) -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-secondary text-white">
+                    <img src="imagenes/familia.jpg" class="card-img-top" alt="Adultos en familia">
+                    <div class="card-body">
+                        <h5 class="card-title" data-i18n="resultados21">Adultos (31-45 años)</h5>
+                        <p class="card-text" data-i18n="resultados22">Este grupo busca equilibrio entre trabajo y vida familiar. Prefieren actividades recreativas que involucren a sus familias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Adolescentes (13-17 años) -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-secondary text-white">
+                    <img src="imagenes/equipo.jpeg" class="card-img-top" alt="Adolescentes en deportes">
+                    <div class="card-body">
+                        <h5 class="card-title" data-i18n="resultados23">Adolescentes (13-17 años)</h5>
+                        <p class="card-text" data-i18n="resultados24">Los adolescentes se inclinan hacia deportes de equipo y actividades artísticas. Buscan pertenencia y expresión personal.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Niños (0-12 años) -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-secondary text-white">
+                    <img src="imagenes/niños.jpeg" class="card-img-top" alt="Niños jugando">
+                    <div class="card-body">
+                        <h5 class="card-title" data-i18n="resultados25">Niños (0-12 años)</h5>
+                        <p class="card-text" data-i18n="resultados26">Los niños disfrutan de juegos al aire libre y actividades educativas. La interacción social es fundamental para su desarrollo.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Adultos Mayores (60 años y más) -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-secondary text-white">
+                    <img src="imagenes/adultos.jpg" class="card-img-top" alt="Adultos mayores en actividad social">
+                    <div class="card-body">
+                        <h5 class="card-title" data-i18n="resultados27">Adultos Mayores (60 años y más)</h5>
+                        <p class="card-text" data-i18n="resultados28">Este grupo busca actividades recreativas que fomenten la socialización. La salud y el bienestar son prioridades en esta etapa de la vida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Información Regional -->
+        <h3 class="mt-5 mb-4" data-i18n="resultados29">Tendencias por Región</h3>
+        <ul>
+            <li data-i18n="resultados30"><strong>América del Norte:</strong> Alta participación de jóvenes en tecnología y deportes; enfoque en la salud mental.</li>
+            <li data-i18n="resultados31"><strong>América Latina:</strong> Diversidad en preferencias; los jóvenes buscan innovación, mientras que los adultos mayores valoran la comunidad.</li>
+            <li data-i18n="resultados32"><strong>Europa:</strong> Aumento de la población mayor; se priorizan actividades culturales y recreativas para todas las edades.</li>
+            <li data-i18n="resultados33"><strong>Asia:</strong> Crecimiento de la clase media joven; interés por el deporte y la tecnología.</li>
+        </ul>
+
+        <!-- Por género -->
+        <h4 class="text-center text-2xl font-bold mb-6" data-i18n="resultados333">Por Género</h4>
+        <div  class="flex justify-center mb-4 space-x-4">
+            <button class="btn text-white px-4 py-2 rounded hover:bg-blue-400 border border-blue-400"  onclick="showInfo('hombres')" data-i18n="resultados34">Hombres</button>
+            <button class="btn text-white px-4 py-2 rounded hover:bg-blue-400 border border-blue-400" onclick="showInfo('mujeres')" data-i18n="resultados35">Mujeres</button>
+            <button class="btn text-white px-4 py-2 rounded hover:bg-blue-400 border border-blue-400" onclick="showInfo('neutro')" data-i18n="resultados36">Neutro</button>
+        </div>
+
+        <div id="hombres" class="gender-info text-center bg-blue-100 p-4 rounded mt-4 shadow-lg">
+            <h5 class="text-xl font-semibold" data-i18n="resultados34">Hombres</h5>
+            <p data-i18n="resultados37">Prefieren deportes de equipo o actividades físicas intensas.</p>
+        </div>
+
+        <div id="mujeres" class="gender-info text-center bg-blue-100 p-4 rounded mt-4 shadow-lg">
+            <h5 class="text-xl font-semibold" data-i18n="resultados35">Mujeres</h5>
+            <p data-i18n="resultados38">Eligen clases de cocina y actividades de bienestar como pilates.</p>
+        </div>
+
+        <div id="neutro" class="gender-info text-center bg-blue-100 p-4 rounded mt-4 shadow-lg">
+            <h5 class="text-xl font-semibold" data-i18n="resultados36">Neutro</h5>
+            <p data-i18n="resultados39">Opciones compartidas como cine, caminatas o actividades artísticas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Gráficos interactivos -->
+<section id="graficos" class="mb-5">
+    <h2 class="text-center mb-4" data-i18n="resultados40">Gráficos Interactivos</h2>
+    <div class="chart-container">
+        <canvas id="interactiveChart"></canvas>
+    </div>
+    <p class="text-center mt-3" data-i18n="resultados41">Este gráfico muestra cómo las tendencias han evolucionado mes a mes, destacando picos en actividades específicas durante ciertas temporadas.</p>
+</section>
+
+<div class="container my-5" id="comparacion">
+    <h1 class="text-center text-3xl font-bold text-blue-600 mb-4" data-i18n="resultados42">Comparación de Actividades Recreativas</h1>
+
+    <!-- Gráfico de barras para mostrar las actividades más populares -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-xl text-center mb-3" data-i18n="resultados43">Popularidad por Actividad</h3>
+                <div class="chart-container">
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico de barras apiladas para mostrar la preferencia por edades -->
+        <div class="col-md-6">
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-xl text-center mb-3" data-i18n="resultados44">Preferencia por Edad</h3>
+                <div class="chart-container">
+                    <canvas id="agePreferenceChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer>
+    <p data-i18n="footer"> 2025 RecreaPlus | Todos los derechos reservados.</p>
+    <p><a href="mailto:contacto@recreaplus.com" style="color: white;">estefanyMamani@recreaplus.com</a></p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    
+    // Gráfico de barras para mostrar la popularidad de actividades
+    const ctx = document.getElementById('activityChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Deporte', 'Arte', 'Naturaleza'],
+            datasets: [{
+                label: 'Preferencias (%)',
+                data: [40, 30, 20],
+                backgroundColor: ['#f94144', '#577590', '#90be6d']
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    // Gráfico de barras apiladas para mostrar preferencia por edad
+    const ctx2 = document.getElementById('agePreferenceChart').getContext('2d');
+    new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['Jóvenes', 'Adultos', 'Niños', 'Mayores'],
+            datasets: [{
+                label: 'Deporte',
+                data: [35, 10, 5, 3],
+                backgroundColor: '#f94144'
+            }, {
+                label: 'Arte',
+                data: [25, 15, 25, 10],
+                backgroundColor: '#577590'
+            }, {
+                label: 'Naturaleza',
+                data: [20, 20, 50, 30],
+                backgroundColor: '#90be6d'
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top'
+                }
+            },
+            scales: {
+                x: {
+                    stacked: true
+                },
+                y: {
+                    stacked: true
+                }
+            }
+        }
+    });
+
+    // Gráfico interactivo
+    const ctx3 = document.getElementById('interactiveChart').getContext('2d');
+    new Chart(ctx3, {
+        type: 'line',
+        data: {
+            labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+            datasets: [{
+                label: 'Actividad Popular',
+                data: [30, 45, 60, 50, 55, 70, 65, 75, 80, 85, 90, 100],
+                borderColor: '#f94144',
+                backgroundColor: 'rgba(249, 65, 68, 0.2)',
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    // Función para mostrar la información por género
+    function showInfo(gender) {
+        const allInfo = document.querySelectorAll('.gender-info');
+        allInfo.forEach(info => {
+            info.style.display = 'none';
+        });
+        const selectedInfo = document.getElementById(gender);
+        if (selectedInfo) {
+            selectedInfo.style.display = 'block';
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

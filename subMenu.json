@@ -1,0 +1,52 @@
+{
+    "Inicio": [
+        {"nombre": { "es": "Descripción del proyecto", "en": "Project Description" }, "link": "inicio.html" },
+        {"nombre": { "es": "Beneficios de participar", "en": "Benefits of participating" }, "link": "inicio.html"},
+        {"nombre": { "es": "Preguntas frecuentes", "en": "Frequently asked questions" }, "link": "inicio.html"},
+        {"nombre": { "es": "Instrucciones de participación", "en": "Participation instructions" }, "link": "inicio.html"}
+    ],
+    "Formulario de encuesta": [
+        {"nombre": { "es": "Selección de actividades recreativas", "en": "Selection of recreational activities" }, "link": "encuesta.html" },
+        {"nombre": { "es": "Preguntas sobre frecuencia y preferencias", "en": "Questions about frequency and preferences" }, "link": "encuesta.html"},
+        {"nombre": { "es": "Opción de agregar actividades nuevas", "en": "Option to add new activities" }, "link": "encuesta.html"},
+        {"nombre": { "es": "Confirmación de respuestas", "en": "Confirmation of answers" }, "link": "encuesta.html"}
+    ],
+    "Resultados": [
+        { "nombre": { "es": "Estadísticas sobre actividades favoritas", "en": "Statistics on favorite activities" }, "link": "resultados.html" },
+        {"nombre": { "es": "Tendencias por edad, región y género", "en": "Trends by age, region and gender" }, "link": "resultados.html"},
+        {"nombre": { "es": "Gráficos interactivos", "en": "Interactive Charts" }, "link": "resultados.html"},
+        {"nombre": { "es": "Comparación entre diferentes tipos de actividades", "en": "Comparison between different types of activities" }, "link": "resultados.html"}
+    ],
+    "Recomendaciones de actividades": [
+        { "nombre": { "es": "Actividades populares según el perfil", "en": "Popular activities according to profile" }, "link": "recomendaciones.html" },
+        {"nombre": { "es": "Nuevas actividades para probar", "en": "New activities to try" }, "link": "recomendaciones.html"},
+        {"nombre": { "es": "Enlaces a lugares o eventos locales", "en": "Links to local places or events" }, "link": "recomendaciones.html"},
+        {"nombre": { "es": "Consejos sobre actividades recreativas", "en": "Tips on recreational activities" }, "link": "recomendaciones.html"}
+    ],
+    "Comunidad": [
+    { "nombre": { "es": "Foros de discusión sobre actividades", "en": "Discussion forums about activities" }, "link": "comunidad.html" },
+    { "nombre": { "es": "Compartir experiencias", "en": "Share experiences" }, "link": "comunidad.html" },
+    { "nombre": { "es": "Recomendaciones de otros usuarios", "en": "Recommendations from other users" }, "link": "comunidad.html" },
+    { "nombre": { "es": "Crear eventos recreativos", "en": "Create recreational events" }, "link": "comunidad.html" }
+],
+
+    "Extras": [
+        { "nombre": { "es": "Recursos para comenzar nuevas actividades", "en": "Resources to start new activities" }, "link": "extras.html" },
+        {"nombre": { "es": "Guías de actividades al aire libre", "en": "Outdoor activity guides" }, "link": "extras.html"},
+        {"nombre": { "es": "Actividades para grupos", "en": "Activities for groups" }, "link": "extras.html"},
+        {"nombre": { "es": "Video tutoriales", "en": "Video tutorials" }, "link": "extras.html"}
+    ],
+    "FAQ": [
+        { "nombre": { "es": "Cómo agregar nuevas actividades", "en": "How to add new activities" }, "link": "faq.html" },
+        {"nombre": { "es": "Privacidad de los datos", "en": "Data privacy" }, "link": "faq.html"},
+        {"nombre": { "es": "Modificacion de respuestas", "en": "Modification of answers" }, "link": "faq.html"},
+        {"nombre": { "es": "Contactar soporte", "en": "Contact support" }, "link": "faq.html"}
+    ],
+    "Contacto": [
+        { "nombre": { "es": "Formulario de contacto", "en": "Contact form" }, "link": "contacto.html" },
+        {"nombre": { "es": "Redes sociales", "en": "Social networks" }, "link": "contacto.html"},
+        {"nombre": { "es": "Feedback", "en": "Feedback" }, "link": "contacto.html"},
+        {"nombre": { "es": "Atencion al cliente", "en": "Customer service" }, "link": "contacto.html"}
+    ]
+  }
+  

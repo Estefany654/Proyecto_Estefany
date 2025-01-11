@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades Recreativas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        body {
+            background-color: #1a202c;
+            color: #edf2f7;
+            background-image: url('imagenes/fondo.jpg'); ;
+        }
+        .navbar {
+            background-color: #24465c;
+            color: black;
+        }
+      .confirmation-message {
+          display: none;
+          background-color: #28a745;
+          color: white;
+          padding: 15px;
+          margin-top: 20px;
+          text-align: center;
+          border-radius: 5px;
+      }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+        <div class="container-fluid">
+            <a href="index.html" class="btn btn-link text-white">
+                <i class="bi bi-arrow-left"></i>
+            </a>
+    
+            <a class="navbar-brand" href="#">RecreaPlus</a>
+<!-- Selector de idioma -->
+        <div class="flex justify-center mt-2">
+          <select id="language-selector" class="px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 font-medium text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+              <option value="es" selected>Español</option>
+              <option value="en">English</option>  
+          </select>
+        </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link"  href="#inicio">FAQ</a></li>
+                    <li><a href="#agregar-actividad" class="nav-item"><a class="nav-link">Agregar Actividad</a></li>
+                    <li><a href="#privacidad-datos" class="nav-item"><a class="nav-link">Privacidad de Datos</a></li>
+                    <li><a href="#modificacion-respuestas" class="nav-item"><a class="nav-link">Modificar Respuestas</a></li>
+                    <li><a href="#contactar-soporte" class="nav-item"><a class="nav-link">Contactar Soporte</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+        <section id="privacidad-datos" class="mb-8 py-12 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg shadow-lg text-white">
+          <div class="container mx-auto text-center">
+            <br><br><br>
+              <h2 class="text-5xl font-extrabold mb-6">🔒 Privacidad de Datos</h2>
+              <p class="text-xl text-gray-300 mb-10">
+                  Nos comprometemos a proteger tu privacidad. A continuación, encontrarás detalles sobre cómo manejamos tus datos.
+              </p>
+      
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <!-- Cuadro 1: Compromiso -->
+                  <div class="bg-gray-700 p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105">
+                      <h3 class="text-xl font-bold text-indigo-400 mb-4">Compromiso con tu Privacidad</h3>
+                      <p class="text-gray-300">
+                          Nos comprometemos a proteger tu privacidad. Los datos recopilados se utilizarán únicamente para mejorar tu experiencia.
+                      </p>
+                  </div>
+      
+                  <!-- Cuadro 2: Seguridad -->
+                  <div class="bg-gray-700 p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105">
+                      <h3 class="text-xl font-bold text-teal-400 mb-4">Seguridad de tus Datos</h3>
+                      <p class="text-gray-300">
+                          Implementamos medidas de seguridad adecuadas para proteger tu información personal contra el acceso no autorizado.
+                      </p>
+                  </div>
+      
+                  <!-- Cuadro 3: Información Compartida -->
+                  <div class="bg-gray-700 p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105">
+                      <h3 class="text-xl font-bold text-purple-400 mb-4">No Compartimos tu Información</h3>
+                      <p class="text-gray-300">
+                          No compartimos ni vendemos tu información a terceros. Tu confianza es nuestra prioridad.
+                      </p>
+                  </div>
+              </div>
+      
+              <div class="mt-10">
+                  <a href="#mas-info" class="inline-block px-8 py-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300 text-lg">
+                      Más Información
+                  </a>
+              </div>
+          </div>
+      </section>
+      
+
+        <!-- Sección para agregar nuevas actividades -->
+<section id="agregar-actividad" class="mb-8">
+  <h2 class="text-3xl font-semibold mb-6 text-yellow-500">Cómo Agregar Nuevas Actividades</h2>
+  <p class="mb-4 text-lg">
+      Para agregar nuevas actividades, completa el formulario con el nombre, descripción, fecha y otros detalles importantes. 
+      Una vez guardado, la actividad será visible para todos los usuarios.
+  </p>
+
+  <!-- Formulario para agregar nueva actividad -->
+  <div class="bg-gray-800 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
+      <h3 class="text-2xl font-semibold text-yellow-400 mb-4">Formulario para Crear Actividad</h3>
+      <form id="formAgregarActividad" class="space-y-6">
+          <input type="text" id="actividadNombre" class="p-3 w-full rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Nombre de la Actividad" required />
+          <textarea id="actividadDescripcion" class="p-3 w-full rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Descripción de la Actividad" required></textarea>
+          <input type="datetime-local" id="actividadFecha" class="p-3 w-full rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500" required />
+          <input type="text" id="actividadUbicacion" class="p-3 w-full rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Ubicación" required />
+          <button type="submit" class="w-full p-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300">Agregar Actividad</button>
+      </form>
+  </div>
+
+  <!-- Mensaje de éxito -->
+  <div id="mensajeExito" class="mt-6 hidden text-green-600 font-semibold text-lg text-center">
+      ¡Tu actividad ha sido creada correctamente! Si deseas modificarla, puedes ir a la sección de modificación.
+  </div>
+</section>
+
+<!-- Sección de modificación de actividades existentes -->
+<section id="modificacion-actividades" class="mb-8">
+  <h2 class="text-3xl font-semibold mb-6 text-yellow-500">Modificar Actividades Existentes</h2>
+  <p class="mb-4 text-lg">
+      Aquí puedes modificar las actividades que ya has creado. Solo selecciona una actividad y cambia los datos según sea necesario.
+  </p>
+
+  <!-- Lista de actividades creadas -->
+  <div id="actividadesLista" class="space-y-6">
+      <!-- Las actividades creadas se mostrarán aquí -->
+  </div>
+
+  <!-- Formulario para modificar una actividad -->
+  <div id="formModificacion" class="hidden bg-gray-800 p-6 rounded-lg shadow-md max-w-2xl mx-auto mt-6">
+      <h3 class="text-2xl font-semibold text-yellow-400 mb-4">Modificar Actividad</h3>
+      <form id="formModificarActividad" class="space-y-6">
+          <input type="text" id="modificarNombre" class="p-3 w-full rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Nombre de la Actividad" required />
+          <textarea id="modificarDescripcion" class="p-3 w-full rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Descripción de la Actividad" required></textarea>
+          <input type="datetime-local" id="modificarFecha" class="p-3 w-full rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500" required />
+          <input type="text" id="modificarUbicacion" class="p-3 w-full rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Ubicación" required />
+          <button type="submit" class="w-full p-3 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 transition duration-300">Guardar Cambios</button>
+      </form>
+  </div>
+</section>
+
+<script>
+// Iniciar el JSON con algunas actividades predefinidas
+let actividades = JSON.parse(localStorage.getItem("actividades")) || [
+  {
+      "nombre": "Natación",
+      "descripcion": "Practica natación en el mar o en una piscina. Es ideal para mejorar la salud cardiovascular.",
+      "fecha": "2025-02-15T10:00",
+      "ubicacion": "Piscina Municipal"
+  },
+  {
+      "nombre": "Senderismo",
+      "descripcion": "Explora nuevos senderos, disfruta de la naturaleza y haz ejercicio. Una actividad perfecta para los fines de semana.",
+      "fecha": "2025-03-05T08:30",
+      "ubicacion": "Parque Nacional de las Montañas"
+  },
+  {
+      "nombre": "Ciclismo",
+      "descripcion": "Recorre rutas en bicicleta, disfruta del aire libre y mejora tu resistencia física.",
+      "fecha": "2025-04-10T07:00",
+      "ubicacion": "BiciRuta Central"
+  }
+];
+
+// Función para almacenar y gestionar actividades utilizando JSON
+document.getElementById("formAgregarActividad").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Obtener los datos del formulario
+  const nombre = document.getElementById("actividadNombre").value;
+  const descripcion = document.getElementById("actividadDescripcion").value;
+  const fecha = document.getElementById("actividadFecha").value;
+  const ubicacion = document.getElementById("actividadUbicacion").value;
+
+  // Crear un nuevo objeto de actividad
+  const nuevaActividad = { nombre, descripcion, fecha, ubicacion };
+  actividades.push(nuevaActividad);
+
+  // Guardar la nueva actividad en el almacenamiento local (JSON)
+  localStorage.setItem("actividades", JSON.stringify(actividades));
+
+  // Mostrar mensaje de éxito
+  document.getElementById("mensajeExito").classList.remove("hidden");
+
+  // Limpiar el formulario
+  document.getElementById("formAgregarActividad").reset();
+
+  // Recargar la lista de actividades para mostrarla actualizada
+  cargarActividades();
+});
+
+// Función para cargar las actividades
+function cargarActividades() {
+  const actividadesLista = document.getElementById("actividadesLista");
+  actividadesLista.innerHTML = ''; // Limpiar la lista
+
+  // Crear un listado de actividades
+  actividades.forEach((actividad, index) => {
+      const actividadDiv = document.createElement("div");
+      actividadDiv.classList.add("bg-gray-800", "p-4", "rounded-lg", "shadow-md");
+      actividadDiv.innerHTML = `
+          <h4 class="text-xl font-semibold text-yellow-500">${actividad.nombre}</h4>
+          <p class="text-gray-300">${actividad.descripcion}</p>
+          <p class="text-gray-400">Fecha: ${new Date(actividad.fecha).toLocaleString()}</p>
+          <p class="text-gray-400">Ubicación: ${actividad.ubicacion}</p>
+          <button class="bg-yellow-500 text-white px-4 py-2 rounded-md mt-2" onclick="modificarActividad(${index})">Modificar</button>
+      `;
+      actividadesLista.appendChild(actividadDiv);
+  });
+}
+
+// Función para cargar el formulario de modificación
+function modificarActividad(index) {
+  const actividad = actividades[index];
+  document.getElementById("modificarNombre").value = actividad.nombre;
+  document.getElementById("modificarDescripcion").value = actividad.descripcion;
+  document.getElementById("modificarFecha").value = actividad.fecha;
+  document.getElementById("modificarUbicacion").value = actividad.ubicacion;
+
+  document.getElementById("formModificacion").classList.remove("hidden");
+  document.getElementById("formModificarActividad").onsubmit = function(event) {
+      event.preventDefault();
+
+      // Modificar la actividad en el arreglo
+      actividades[index] = {
+          nombre: document.getElementById("modificarNombre").value,
+          descripcion: document.getElementById("modificarDescripcion").value,
+          fecha: document.getElementById("modificarFecha").value,
+          ubicacion: document.getElementById("modificarUbicacion").value
+      };
+
+      // Guardar la actividad modificada
+      localStorage.setItem("actividades", JSON.stringify(actividades));
+
+      // Recargar la lista de actividades
+      cargarActividades();
+
+      // Limpiar y ocultar el formulario de modificación
+      document.getElementById("formModificacion").classList.add("hidden");
+  };
+}
+
+// Cargar actividades al cargar la página
+window.onload = cargarActividades;
+</script>
+
+
+        <section id="contactar-soporte" class="mb-8 py-12 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg shadow-lg text-white">
+          <div class="container mx-auto text-center">
+              <h2 class="text-4xl font-extrabold mb-6">📞 Contactar Soporte</h2>
+              <p class="text-lg text-gray-300 mb-10">
+                  Si necesitas ayuda o tienes alguna pregunta, puedes ponerte en contacto con nuestro equipo de soporte a través del
+                  siguiente formulario de contacto:
+              </p>
+              
+              <form id="contact-form" class="bg-gray-700 p-6 rounded-lg shadow-md">
+                  <div class="mb-4">
+                      <label for="nombre" class="block text-sm font-semibold mb-1">Nombre:</label>
+                      <input type="text" id="nombre" name="nombre" class="w-full p-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingresa tu nombre" required>
+                  </div>
+                  <div class="mb-4">
+                      <label for="correo" class="block text-sm font-semibold mb-1">Correo electrónico:</label>
+                      <input type="email" id="correo" name="correo" class="w-full p-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingresa tu correo electrónico" required>
+                  </div>
+                  <div class="mb-4">
+                      <label for="mensaje" class="block text-sm font-semibold mb-1">Mensaje:</label>
+                      <textarea id="mensaje" name="mensaje" class="w-full p-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                  </div>
+                  <button type="submit" class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition duration-300 w-full">
+                      Enviar Mensaje
+                  </button>
+              </form>
+              <div class="confirmation-message" id="confirmation-message">
+                  ¡Tu mensaje ha sido enviado con éxito! Nos pondremos en contacto contigo pronto.
+              </div>
+          </div>
+      </section>
+  
+      <script>
+          // Manejo del formulario con JavaScript puro
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault(); // Evita el envío real del formulario
+              
+              // Muestra el mensaje de confirmación
+              const confirmationMessage = document.getElementById('confirmation-message');
+              confirmationMessage.style.display = 'block';
+              
+              // Oculta el mensaje después de 3 segundos
+              setTimeout(() => {
+                  confirmationMessage.style.display = 'none';
+              }, 3000);
+              
+              // Limpia el formulario
+              this.reset();
+          });
+      </script>
+  
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <footer class="bg-gray-800 p-4 text-center text-sm">
+        <p>&copy; 2025 Actividades Recreativas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

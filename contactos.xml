@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translations>
+    <language code="en">
+        <navbar>
+            <contact>Contact</contact>
+            <contactForm>Contact Form</contactForm>
+            <socialMedia>Social Media</socialMedia>
+            <feedback>Feedback</feedback>
+            <customerService>Customer Service</customerService>
+        </navbar>
+        <contactForm>
+            <title>Contact Form</title>
+            <description>If you have any questions, fill out the form and we will get back to you as soon as possible.</description>
+            <name>Full Name</name>
+            <email>Email Address</email>
+            <message>Message</message>
+            <sendButton>Send</sendButton>
+        </contactForm>
+        <footer>
+            <rights>&copy; 2025 MyWebsite. All rights reserved.</rights>
+            <privacyPolicy>Privacy Policy</privacyPolicy>
+            <termsOfUse>Terms of Use</termsOfUse>
+        </footer>
+    </language>
+
+    <language code="es">
+        <navbar>
+            <contact>Contacto</contact>
+            <contactForm>Formulario de Contacto</contactForm>
+            <socialMedia>Redes Sociales</socialMedia>
+            <feedback>Feedback</feedback>
+            <customerService>Atención al Cliente</customerService>
+        </navbar>
+        <contactForm>
+            <title>Formulario de Contacto</title>
+            <description>¿Tienes alguna duda? Llena el formulario y nos pondremos en contacto contigo.</description>
+            <name>Nombre Completo</name>
+            <email>Correo Electrónico</email>
+            <message>Mensaje</message>
+            <sendButton>Enviar</sendButton>
+        </contactForm>
+        <footer>
+            <rights>&copy; 2025 MiSitioWeb. Todos los derechos reservados.</rights>
+            <privacyPolicy>Política de Privacidad</privacyPolicy>
+            <termsOfUse>Términos de Uso</termsOfUse>
+        </footer>
+    </language>
+</translations>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades Recreativas</title>
+        <!-- CSS de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <style>
+            body {
+            background-color: #1a202c;
+            color: #edf2f7;
+            background-image: url('imagenes/fondo.jpg'); ;
+        }
+        .navbar {
+            background-color: #24465c;
+            color: black;
+        }
+            /* Estilos personalizados */
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 50px; /* Ancho del botón */
+                height: 50px; /* Alto del botón */
+                border-radius: 50%; /* Botones redondeados */
+                background-color: rgba(94, 166, 16, 0.921); /* Fondo semi-transparente */
+            }
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-color: transparent; /* Fondo transparente para los iconos */
+            }
+            .carousel-control-prev-icon::after,
+            .carousel-control-next-icon::after {
+                font-size: 30px; /* Tamaño del icono */
+                color: rgb(35, 14, 14); /* Color del icono */
+            }
+        </style>
+    
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="bg-gray-800 p-4">
+
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+            <div class="container-fluid">
+                <a href="index.html" class="btn btn-link text-white">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+        
+                <a class="navbar-brand" href="#">RecreaPlus</a>
+    <!-- Selector de idioma -->
+            <div class="flex justify-center mt-2">
+              <select id="language-selector" class="px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 font-medium text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                  <option value="es" selected>Español</option>
+                  <option value="en">English</option>  
+              </select>
+            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" data-i18n="ini_ini" href="#inicio">COMUNIDAD</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#foros">Foros de discusión sobre actividades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#compartir">Compartir experiencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#recomendaciones">Recomendaciones de otros usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#eventoscrear-eventos">Crear eventos recreativos</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="p-6">
+
+      <section id="foros" class="mb-8 py-6 bg-gradient-to-b  to-gray-800 rounded-lg shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-4"> Foros de Discusión sobre Actividades</h2><BR></BR>
+            <p class="text-lg text-gray-300 mb-6">
+                Participa en nuestros foros de discusión donde podrás compartir y aprender sobre diversas actividades recreativas,
+                debatir con otros usuarios y hacer preguntas para obtener recomendaciones sobre nuevas actividades.
+            </p>
+    
+<!-- Carrusel de Foros -->
+<div id="forosCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- Foro 1: Juegos de Mesa -->
+              <div class="bg-gray-800 p-4 rounded-lg shadow-md flex flex-col w-full"><br>
+                  <img src="imagenes/mesa.webp" alt="Juegos de Mesa" class="rounded-full mb-2 h-24 w-24 mx-auto object-cover" />
+                  <h3 class="text-xl font-bold ">Foro de Juegos de Mesa</h3>
+                  <p class="text-gray-300">Comparte estrategias y reseñas sobre tus juegos favoritos. ¡Únete a nuestras noches de juegos virtuales!</p>
+                  <button data-bs-toggle="modal" data-bs-target="#comentarioModal" class="mt-2 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Participar</button>
+              </div>
+
+              <!-- Foro 2: Fotografía -->
+              <div class="bg-gray-800 p-4 rounded-lg shadow-md flex flex-col w-full">
+                  <img src="imagenes/arte.webp" alt="Fotografía" class="rounded-full mb-2 h-24 w-24 mx-auto object-cover" />
+                  <h3 class="text-xl font-bold ">Foro de Fotografía</h3>
+                  <p class="text-gray-300">Comparte tus mejores fotos y recibe críticas constructivas. ¡Participa en nuestro desafío semanal!</p>
+                  <button data-bs-toggle="modal" data-bs-target="#comentarioModal" class="mt-2 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Participar</button>
+              </div>
+
+              <!-- Foro 3: Actividades al Aire Libre -->
+              <div class="bg-gray-800 p-4 rounded-lg shadow-md flex flex-col w-full">
+                  <img src="imagenes/playa.jpg" alt="Actividades al Aire Libre" class="rounded-full mb-2 h-24 w-24 mx-auto object-cover" />
+                  <h3 class="text-xl font-bold ">Foro de Actividades al Aire Libre</h3>
+                  <p class="text-gray-300">Organiza excursiones grupales y comparte tus experiencias en senderismo y ciclismo.</p>
+                  <button data-bs-toggle="modal" data-bs-target="#comentarioModal" class="mt-2 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Participar</button>
+              </div>
+          </div>
+      </div>
+
+      <!-- Carrusel Item 2 -->
+      <div class="carousel-item">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- Foro 4: Manualidades y DIY -->
+              <div class="bg-gray-800 p-4 rounded-lg shadow-md flex flex-col w-full">
+                  <img src="imagenes/pintura.jpg" alt="Manualidades" class="rounded-full mb-2 h-24 w-24 mx-auto object-cover" />
+                  <h3 class="text-xl font-bold text-">Foro de Manualidades y DIY</h3>
+                  <p class="text-gray-300">Comparte tus proyectos creativos y participa en nuestros retos mensuales.</p>
+                  <button data-bs-toggle="modal" data-bs-target="#comentarioModal" class="mt-2 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Participar</button>
+              </div>
+
+              <!-- Foro 5: Deportes Recreativos -->
+              <div class="bg-gray-800 p-4 rounded-lg shadow-md flex flex-col w-full">
+                  <img src="imagenes/equipo.jpeg" alt="Deportes Recreativos" class="rounded-full mb-2 h-24 w-24 mx-auto object-cover" />
+                  <h3 class="text-xl font-bold text-yellow-500">Foro de Deportes Recreativos</h3>
+                  <p class="text-gray-300">Discute sobre tus deportes favoritos y organiza torneos amistosos.</p>
+                  <button data-bs-toggle="modal" data-bs-target="#comentarioModal" class="mt-2 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Participar</button>
+              </div>
+
+              <!-- Foro 6: Viajes y Aventuras -->
+              <div class="bg-gray-800 p-4 rounded-lg shadow-md flex flex-col w-full">
+                  <img src="imagenes/acampar.jpg" alt="Viajes y Aventuras" class="rounded-full mb-2 h-24 w-24 mx-auto object-cover" />
+                  <h3 class="text-xl font-bold text-yellow-500">Foro de Viajes y Aventuras</h3>
+                  <p class="text-gray-300">Comparte tus experiencias de viaje y consejos sobre destinos increíbles.</p>
+                  <button data-bs-toggle="modal" data-bs-target="#comentarioModal" class="mt-2 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Participar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Controles del Carrusel -->
+  <button 
+      class="carousel-control-prev absolute top-1/2 translate-middle-y border-0 rounded-full bg-blue-600 text-white p-3" 
+      type="button" 
+      data-bs-target="#forosCarousel" 
+      data-bs-slide="prev"
+      style="left: 10px;">
+      <span aria-hidden="true" class="text-2xl">&lt;</span> <!-- Icono más grande -->
+  </button>
+  <button 
+      class="carousel-control-next absolute top-1/2 translate-middle-y border-0 rounded-full bg-blue-600 text-white p-3" 
+      type="button" 
+      data-bs-target="#forosCarousel" 
+      data-bs-slide="next"
+      style="right: 10px;">
+      <span aria-hidden="true" class="text-2xl">&gt;</span> <!-- Icono más grande -->
+  </button>
+</div>
+
+<!-- Modal de Comentarios -->
+<div class="modal fade" id="comentarioModal" tabindex="-1" aria-labelledby="comentarioModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-gray-900 text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="comentarioModalLabel">Deja tu Comentario personal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="comentario" class="form-label">Comentario</label>
+            <textarea class="form-control bg-gray-800 text-black" id="comentario" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<section id="compartir" class="mb-8"><br><br><br>
+  <h2 class="text-2xl font-semibold mb-4">Compartir experiencias</h2><br>
+  <p>
+      Comparte tus experiencias con otras personas, relata las actividades que más disfrutas y descubre nuevas opciones que
+      otros usuarios han probado y te recomiendan.
+  </p>
+
+  <!-- Formulario para compartir experiencia -->
+  <form id="formExperiencia" class="mt-6 bg-gray-800 p-6 rounded-lg">
+      <div class="mb-4">
+          <label for="actividad" class="block text-white">Actividad de la que desea hablar</label>
+          <input type="text" id="actividad" class="w-full p-3 rounded-md bg-gray-700 text-white" placeholder="Escribe la actividad que más disfrutas">
+      </div>
+      <div class="mb-4">
+          <label for="descripcion" class="block text-white">Descripción de su experiencia con dicha actividad</label>
+          <textarea id="descripcion" class="w-full p-3 rounded-md bg-gray-700 text-white" rows="4" placeholder="Comparte tu experiencia..."></textarea>
+      </div>
+      <div class="mb-4">
+          <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Compartir experiencia</button>
+      </div>
+  </form>
+
+  <!-- Sección para mostrar las experiencias compartidas -->
+  <div id="experienciasCompartidas" class="mt-8">
+      <h3 class="text-xl font-semibold mb-4">Experiencias compartidas</h3>
+      <div id="experienciasList" class="space-y-4">
+          <!-- Las experiencias se agregarán aquí -->
+      </div>
+  </div>
+</section>
+
+<script>
+  // Función para manejar el envío de la experiencia y agregarla al listado
+  document.getElementById('formExperiencia').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita que la página se recargue
+
+      // Obtener los datos del formulario
+      const actividad = document.getElementById('actividad').value;
+      const descripcion = document.getElementById('descripcion').value;
+
+      // Validar que ambos campos estén llenos
+      if (!actividad || !descripcion) {
+          alert("Por favor, completa todos los campos.");
+          return;
+      }
+
+      // Crear un objeto con los datos de la experiencia
+      const nuevaExperiencia = {
+          id: Date.now(), // Usamos la fecha como un identificador único
+          actividad: actividad,
+          descripcion: descripcion
+      };
+
+      // Obtener las experiencias existentes desde el localStorage o inicializar un array vacío
+      const experiencias = JSON.parse(localStorage.getItem('experiencias')) || [];
+
+      // Agregar la nueva experiencia al array
+      experiencias.push(nuevaExperiencia);
+
+      // Guardar el array actualizado en el localStorage
+      localStorage.setItem('experiencias', JSON.stringify(experiencias));
+
+      // Actualizar la vista de experiencias compartidas
+      mostrarExperiencias();
+
+      // Limpiar el formulario
+      document.getElementById('formExperiencia').reset();
+  });
+
+  // Función para mostrar las experiencias almacenadas
+  function mostrarExperiencias() {
+      const experiencias = JSON.parse(localStorage.getItem('experiencias')) || [];
+      const listaExperiencias = document.getElementById('experienciasList');
+      listaExperiencias.innerHTML = ''; // Limpiar lista antes de renderizar
+
+      // Recorrer las experiencias y agregarlas al DOM
+      experiencias.forEach(experiencia => {
+          const div = document.createElement('div');
+          div.classList.add('bg-gray-800', 'p-4', 'rounded-lg', 'shadow-md', 'flex', 'justify-between', 'items-center');
+          div.innerHTML = `
+              <div class="flex-1">
+                  <h4 class="text-lg font-semibold text-yellow-500">${experiencia.actividad}</h4>
+                  <p class="text-gray-300">${experiencia.descripcion}</p>
+              </div>
+              <div class="flex gap-4">
+                  <button class="editBtn text-blue-500  hover:text-blue-700" onclick="editarExperiencia(${experiencia.id})">Modificar</button>
+                  <button class="deleteBtn text-red-500 hover:text-red-700" onclick="eliminarExperiencia(${experiencia.id})">Eliminar</button>
+              </div>
+          `;
+          listaExperiencias.appendChild(div);
+      });
+  }
+
+  // Función para eliminar una experiencia
+  function eliminarExperiencia(id) {
+      const experiencias = JSON.parse(localStorage.getItem('experiencias')) || [];
+      const nuevasExperiencias = experiencias.filter(experiencia => experiencia.id !== id);
+      localStorage.setItem('experiencias', JSON.stringify(nuevasExperiencias));
+
+      // Actualizar la vista
+      mostrarExperiencias();
+  }
+
+  // Función para editar una experiencia
+  function editarExperiencia(id) {
+      const experiencias = JSON.parse(localStorage.getItem('experiencias')) || [];
+      const experienciaAEditar = experiencias.find(experiencia => experiencia.id === id);
+
+      // Rellenar el formulario con los datos de la experiencia a editar
+      document.getElementById('actividad').value = experienciaAEditar.actividad;
+      document.getElementById('descripcion').value = experienciaAEditar.descripcion;
+
+      // Cambiar el comportamiento del botón de "Compartir experiencia" para actualizar la experiencia
+      document.querySelector('button[type="submit"]').innerText = 'Actualizar experiencia';
+      document.querySelector('button[type="submit"]').onclick = function() {
+          actualizarExperiencia(id);
+      };
+  }
+
+  // Función para actualizar una experiencia
+  function actualizarExperiencia(id) {
+      const experiencias = JSON.parse(localStorage.getItem('experiencias')) || [];
+      const experienciaAActualizar = experiencias.find(experiencia => experiencia.id === id);
+
+      // Obtener los datos actualizados del formulario
+      experienciaAActualizar.actividad = document.getElementById('actividad').value;
+      experienciaAActualizar.descripcion = document.getElementById('descripcion').value;
+
+      // Guardar las experiencias actualizadas en el localStorage
+      localStorage.setItem('experiencias', JSON.stringify(experiencias));
+
+      // Actualizar la vista
+      mostrarExperiencias();
+
+      // Limpiar el formulario y restaurar el botón a su estado original
+      document.getElementById('formExperiencia').reset();
+      document.querySelector('button[type="submit"]').innerText = 'Compartir experiencia';
+      document.querySelector('button[type="submit"]').onclick = function() {
+          agregarExperiencia();
+      };
+  }
+
+  // Mostrar las experiencias al cargar la página
+  window.onload = mostrarExperiencias;
+</script>
+
+
+<section id="recomendaciones" class="mb-8">
+  <h2 class="text-3xl font-semibold mb-6 ">Recomendaciones de otros usuarios</h2>
+  <p class="mb-4 text-lg">
+      Explora las recomendaciones de los usuarios que forman parte de nuestra comunidad. Conoce sus actividades favoritas
+      y descubre qué experiencias han dejado huella.
+  </p>
+
+  <!-- Sección para mostrar las recomendaciones -->
+  <div id="recomendacionesCompartidas" class="mt-8">
+      <h3 class="text-xl font-semibold mb-4 ">Recomendaciones compartidas</h3>
+      <div id="recomendacionesList" class="space-y-6">
+          <!-- Las recomendaciones se cargarán aquí -->
+      </div>
+  </div>
+</section>
+
+<script>
+  // Función para cargar las recomendaciones desde un archivo JSON
+  async function cargarRecomendaciones() {
+      try {
+          const respuesta = await fetch('comunidad.json'); // Ruta al archivo JSON
+          const recomendaciones = await respuesta.json(); // Convertir a objeto JavaScript
+
+          // Obtener el contenedor donde se mostrarán las recomendaciones
+          const listaRecomendaciones = document.getElementById('recomendacionesList');
+          listaRecomendaciones.innerHTML = ''; // Limpiar lista antes de renderizar
+
+          // Recorrer las recomendaciones y agregarlas al DOM
+          recomendaciones.forEach(recomendacion => {
+              const div = document.createElement('div');
+              div.classList.add('bg-gray-800', 'p-6', 'rounded-lg', 'shadow-md', 'flex', 'flex-col', 'gap-4');
+              div.innerHTML = `
+                  <div class="flex items-center space-x-4">
+                      <div class="text-yellow-400 font-semibold">${recomendacion.usuario}</div>
+                      <div class="text-gray-300 text-sm italic">recomienda:</div>
+                  </div>
+                  <h4 class="text-lg font-bold text-yellow-500 mt-2">${recomendacion.actividad}</h4>
+                  <p class="text-gray-300 mt-2">${recomendacion.descripcion}</p>
+              `;
+              listaRecomendaciones.appendChild(div);
+          });
+      } catch (error) {
+          console.error('Error al cargar las recomendaciones:', error);
+      }
+  }
+
+  // Llamar la función al cargar la página
+  window.onload = cargarRecomendaciones;
+</script>
+
+<section id="crear-eventos" class="mb-8">
+  <h2 class="text-3xl font-semibold mb-6 text-yellow-500">Crear Eventos Recreativos</h2>
+  <p class="mb-4 text-lg">
+      Organiza y comparte tus propios eventos recreativos con la comunidad. Puedes agregar nuevos eventos, editar los existentes o eliminarlos según sea necesario.
+  </p>
+
+  <!-- Formulario para crear un nuevo evento -->
+  <div class="mb-6">
+      <h3 class="text-xl font-semibold text-yellow-400">Crear Nuevo Evento</h3>
+      <form id="formCrearEvento" class="space-y-4">
+          <input type="text" id="eventoNombre" class="p-3 w-full rounded-md bg-gray-800 text-white" placeholder="Nombre del Evento" required />
+          <textarea id="eventoDescripcion" class="p-3 w-full rounded-md bg-gray-800 text-white" placeholder="Descripción del Evento" required></textarea>
+          <input type="datetime-local" id="eventoFecha" class="p-3 w-full rounded-md bg-gray-800 text-white" required />
+          <input type="text" id="eventoUbicacion" class="p-3 w-full rounded-md bg-gray-800 text-white" placeholder="Ubicación" required />
+          <button type="submit" class="w-full p-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">Crear Evento</button>
+      </form>
+  </div>
+
+  <!-- Sección para listar y gestionar eventos -->
+  <div id="eventosList" class="mt-8">
+      <h3 class="text-xl font-semibold mb-4 text-yellow-400">Eventos Recientes</h3>
+      <!-- Lista de eventos creada dinámicamente -->
+  </div>
+</section>
+
+<script>
+// Función para manejar el almacenamiento de eventos en el navegador (en lugar de un archivo JSON)
+let eventos = JSON.parse(localStorage.getItem("eventos")) || [];
+
+// Función para renderizar los eventos en el DOM
+function renderizarEventos() {
+  const listaEventos = document.getElementById("eventosList");
+  listaEventos.innerHTML = ''; // Limpiar la lista
+
+  eventos.forEach((evento, index) => {
+      const div = document.createElement('div');
+      div.classList.add('bg-gray-800', 'p-6', 'rounded-lg', 'shadow-md', 'flex', 'flex-col', 'gap-4');
+      div.innerHTML = `
+          <h4 class="text-lg font-bold text-yellow-500">${evento.nombre}</h4>
+          <p class="text-gray-300">${evento.descripcion}</p>
+          <p class="text-gray-400 text-sm">Fecha y Hora: ${evento.fecha}</p>
+          <p class="text-gray-400 text-sm">Ubicación: ${evento.ubicacion}</p>
+          <div class="flex justify-end gap-4">
+              <button class="text-blue-600 hover:text-blue-700" onclick="editarEvento(${index})">Editar</button>
+              <button class="text-red-600 hover:text-red-700" onclick="eliminarEvento(${index})">Eliminar</button>
+          </div>
+      `;
+      listaEventos.appendChild(div);
+  });
+}
+
+// Función para agregar un nuevo evento
+document.getElementById("formCrearEvento").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const nombre = document.getElementById("eventoNombre").value;
+  const descripcion = document.getElementById("eventoDescripcion").value;
+  const fecha = document.getElementById("eventoFecha").value;
+  const ubicacion = document.getElementById("eventoUbicacion").value;
+
+  const nuevoEvento = { nombre, descripcion, fecha, ubicacion };
+  eventos.push(nuevoEvento);
+  localStorage.setItem("eventos", JSON.stringify(eventos)); // Guardar en localStorage
+  renderizarEventos(); // Volver a renderizar los eventos
+
+  // Limpiar el formulario
+  document.getElementById("formCrearEvento").reset();
+});
+
+// Función para editar un evento
+function editarEvento(index) {
+  const evento = eventos[index];
+
+  // Rellenar los campos del formulario con los valores actuales del evento
+  document.getElementById("eventoNombre").value = evento.nombre;
+  document.getElementById("eventoDescripcion").value = evento.descripcion;
+  document.getElementById("eventoFecha").value = evento.fecha;
+  document.getElementById("eventoUbicacion").value = evento.ubicacion;
+
+  // Eliminar el evento original antes de editarlo
+  eventos.splice(index, 1);
+  localStorage.setItem("eventos", JSON.stringify(eventos)); // Guardar cambios en localStorage
+
+  renderizarEventos(); // Volver a renderizar la lista de eventos
+}
+
+// Función para eliminar un evento
+function eliminarEvento(index) {
+  eventos.splice(index, 1);
+  localStorage.setItem("eventos", JSON.stringify(eventos)); // Guardar cambios en localStorage
+  renderizarEventos(); // Volver a renderizar los eventos
+}
+
+// Llamar a la función al cargar la página para mostrar los eventos guardados
+renderizarEventos();
+</script>
+
+    </main>
+
+    <footer class="bg-gray-800 p-4 text-center text-sm">
+        <p>&copy; 2025 Actividades Recreativas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+</body>
+</html>

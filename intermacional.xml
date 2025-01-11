@@ -1,0 +1,836 @@
+<traslations>
+    <key name="titulo">
+    <es>Menú Actividades Recreativas</es>
+    <en>Recreational Activities Menu</en>
+    </key>
+
+    <key name="carrusel1">
+    <es>Actividades recreativas favoritas</es>
+    <en>Favorite recreational activities</en>
+    </key>
+
+    <key name="carrusel2">
+    <es>Disfruta jugando ajedrez con tus amigos</es>
+    <en>Enjoy playing chess with your friends</en>
+    </key>
+
+    <key name="carrusel3">
+    <es>Actividades recreativas favoritas</es>
+    <en>Favorite recreational activities</en>
+    </key>
+
+    <key name="hero-section1">
+    <es>Bienvenidos a RecreaPlus</es><en>Welcome to RecreaPlus</en>
+    </key>
+
+    <key name="hero-section2">
+    <es>Tu plataforma para descubrir, participar y disfrutar de las mejores actividades recreativas</es>
+    <en>Your platform to discover, participate and enjoy the best recreational activities</en>
+    </key>
+
+    <key name="hero-section3">
+    <es>Descubre Más</es>
+    <en>Discover More</en>
+    </key>
+
+    <key name="descripcion1">
+    <es>¿Qué es RecreaPlus?</es>
+    <en>What is RecreaPlus?</en>
+    </key>
+
+    <key name="descripcion2">
+    <es>Resumen del Proyecto</es>
+    <en>Project Summary</en>
+    </key>
+
+    <key name="descripcion3">
+    <es>RecreaPlus es una plataforma diseñada para recopilar y analizar las actividades recreativas preferidas por la comunidad. Nuestro objetivo es conocer tus gustos y recomendarte nuevas opciones para disfrutar tu tiempo libre, mientras también ofrecemos estadísticas y resultados sobre las tendencias más populares.</es>
+    <en>RecreaPlus is a platform designed to collect and analyze the recreational activities preferred by the community. Our goal is to know your tastes and recommend new options to enjoy your free time, while also offering statistics and results on the most popular trends.</en>
+    </key>
+
+    <key name="descripcion4">
+    <es>Participando en nuestra encuesta podrás obtener recomendaciones personalizadas y contribuir al desarrollo de eventos recreativos en tu área.</es>
+    <en>By participating in our survey you can obtain personalized recommendations and contribute to the development of recreational events in your area</en>
+    </key>
+
+    <key name="beneficios1">
+    <es>Descubre mas de las actividades interactivas</es>
+    <en>Discover more of the interactive activities</en>
+    </key>
+
+    <key name="beneficios2">
+    <es>Accede a Recomendaciones</es>
+    <en>Access Recommendations</en>
+    </key>
+
+    <key name="beneficios3">
+    <es>Recibe sugerencias personalizadas basadas en tus preferencias recreativas.</es>
+    <en>Receive personalized suggestions based on your recreational preferences.</en>
+    </key>
+
+    <key name="beneficios4">
+    <es>Eventos Locales</es>
+    <en>Local Events</en>
+    </key>
+
+    <key name="beneficios5">
+    <es>Conoce eventos recreativos cercanos a tu ubicación y participa en ellos.</es>
+    <en>Find out about recreational events near your location and participate in them.</en>
+    </key>
+
+    <key name="beneficios6">
+    <es>Contribuye a la Comunidad</es>
+    <en>Contribute to the Community</en>
+    </key>
+
+    <key name="beneficios6">
+    <es>Ayuda a mejorar las actividades recreativas a nivel local y global.</es>
+    <en>Help improve recreational activities locally and globally.</en>
+    </key>
+    
+    <key name="footer">
+    <es> 2025 RecreaPlus | Todos los derechos reservados</es>
+    <en> 2025 RecreaPlus | All rights reserved</en>
+    </key>
+
+<!-- traduccion para el inicio -->
+    <key name="inititulo">
+    <es> Inicio</es><en>Start</en>
+    </key>
+
+    <key name="ini_ini">
+    <es>Inicio</es>
+    <en> Start</en>
+    </key>
+
+    <key name="ini_des">
+    <es> Descripcion del proyecto</es>
+    <en> Project description</en>
+    </key>
+
+    <key name="ini_bene">
+    <es> Beneficios de participar</es>
+    <en> Benefits of participating</en>
+    </key>
+
+    <key name="ini_preg">
+    <es> Preguntas frecuentes</es>
+    <en> Frequently asked questions</en>
+    </key>
+
+    <key name="ini_ins">
+    <es>Instrucciones de participacion</es>
+    <en>Participation instructions</en>
+    </key>
+
+    <key name="ini_inicio1">
+    <es> Únete a nuestra comunidad recreativa</es>
+    <en> Join our recreational community</en>
+    </key>
+
+    <key name="ini_inicio2">
+    <es> Nuestra plataforma está diseñada para unir a personas que valoran el tiempo libre y el bienestar. Descubre actividades emocionantes, participa en eventos locales y encuentra inspiración para vivir una vida más enriquecedora.</es>
+    <en> Our platform is designed to bring together people who value free time and well-being. Discover exciting activities, participate in local events and find inspiration to live a more enriching life.</en>
+    </key>
+
+    <key name="ini_inicio3">
+    <es> Descripción del Proyecto</es>
+    <en> Project Description</en>
+    </key>
+
+    <key name="ini_inicio4">
+    <es> RecreAct nace de la pasión por la recreación y el impacto positivo que tiene en nuestras vidas. En este espacio, promovemos actividades que refuercen la creatividad, fomenten la interacción social y reduzcan el estrés cotidiano.</es>
+    <en> RecreAct was born from a passion for recreation and the positive impact it has on our lives. In this space, we promote activities that reinforce creativity, encourage social interaction and reduce daily stress.</en>
+    </key>
+
+    <key name="ini_inicio5">
+    <es> Aprende nuevas habilidades mientras te diviertes.</es>
+    <en> Learn new skills while having fun.</en>
+    </key>
+
+    <key name="ini_inicio6">
+    <es> Participa en desafíos, talleres y eventos grupales.</es>
+    <en>Participate in challenges, workshops and group events.</en>
+    </key>
+
+    <key name="ini_inicio7">
+    <es> Explora actividades personalizadas según tus intereses.</es>
+    <en> Explore personalized activities based on your interests.</en>
+    </key>
+
+    <key name="bene1">
+    <es> Beneficios de Participar</es>
+    <en> Benefits of Participating</en>
+    </key>
+
+    <key name="bene2">
+    <es> Conexión</es>
+    <en> Connection</en>
+    </key>
+
+    <key name="bene3">
+    <es>Forma parte de una red de personas apasionadas por el bienestar y la diversión. Comparte experiencias y crea nuevas amistades.</es>
+    <en>Be part of a network of people passionate about well-being and fun. Share experiences and create new friendships.</en>
+    </key>
+
+    <key name="bene4">
+    <es> Exploración</es>
+    <en> Exploration</en>
+    </key>
+
+    <key name="bene5">
+    <es> Atrévete a probar cosas nuevas. Desde deportes hasta actividades artísticas, elige aquello que te llene de alegría.</es>
+    <en> Dare to try new things. From sports to artistic activities, choose what brings you joy.</en>
+    </key>
+
+    <key name="bene6">
+    <es> Diversión</es>
+    <en> Fun</en>
+    </key>
+
+    <key name="bene7">
+    <es> Disfruta de momentos inolvidables en un ambiente relajado. Haz de tu tiempo libre algo realmente valioso.</es>
+    <en> Enjoy unforgettable moments in a relaxed atmosphere. Make your free time something truly valuable.</en>
+    </key>
+
+    <key name="preg1">
+    <es> Preguntas Frecuentes</es>
+    <en> Frequently Asked Questions</en>
+    </key>
+
+    <key name="preg2">
+    <es> ¿Es gratuito participar?</es>
+    <en> Is it free to participate?</en>
+    </key>
+
+    <key name="preg3">
+    <es> Sí, todas las actividades son completamente gratuitas y están abiertas a todos los interesados.</es>
+    <en> Yes, all activities are completely free and open to all interested parties.</en>
+    </key>
+
+    <key name="preg4">
+    <es> ¿Necesito experiencia previa?</es>
+    <en> Do I need previous experience?</en>
+    </key>
+
+    <key name="preg5">
+    <es> No, nuestras actividades están diseñadas para todas las edades y niveles de experiencia.</es>
+    <en> No, our activities are designed for all ages and experience levels.</en>
+    </key>
+
+
+    <key name="inst2">
+    <es> Regístrate gratuitamente en nuestra plataforma utilizando tu correo.</es>
+    <en> Register for free on our platform using your email.</en>
+    </key>
+    
+    <key name="inst3">
+    <es>Explora nuestro catálogo de actividades y elige las que más te interesen.</es>
+    <en>Explore our catalog of activities and choose the ones that interest you most.</en>
+    </key>
+
+    <key name="inst4">
+    <es> Asiste a los eventos en línea o en tu localidad.</es>
+    <en>Attend events online or locallya.</en>
+    </key>
+    
+    <key name="inst5">
+    <es>Comparte tus experiencias y contribuye con tus ideas.</es>
+    <en>Share your experiences and contribute your ideas.</en>
+    </key>
+
+    <key name="inst4">
+    <es> Asiste a los eventos en línea o en tu localidad.</es>
+    <en>Attend events online or locallya.</en>
+    </key>
+
+<!-- traduccion para el formulario de encuestas -->
+    <key name="encuesta1">
+    <es>Formulario de encuesta</es>
+    <en>Survey form</en>
+    </key>  
+
+    <key name="encuesta2">
+    <es>Seleccionar Actividades</es>
+    <en>Select Activities</en>
+    </key>  
+
+    <key name="encuesta3">
+    <es>Frecuencia</es>
+    <en>Frequency</en>
+    </key>  
+    
+    <key name="encuesta4">
+    <es>Agregar Actividades</es>
+    <en>Add Activities</en>
+    </key>  
+
+    <key name="encuesta5">
+    <es>Confirmar Respuestas</es>
+    <en>Confirm Answers</en>
+    </key>  
+
+    <key name="encuesta6">
+    <es>¡Participa en nuestra encuesta!</es>
+    <en>Take part in our survey!</en>
+    </key>  
+
+    <key name="encuesta7">
+    <es>Tus opiniones son importantes para mejorar nuestras actividades recreativas.</es>
+    <en>Your opinions are important to improve our recreational activities.</en>
+    </key>  
+
+    <key name="encuesta8">
+    <es>Selecciona tus actividades recreativas favoritas</es>
+    <en>Select your favorite recreational activities</en>
+    </key>  
+
+    <key name="encuesta9">
+    <es>Frecuencia de Participación</es>
+    <en>Share your experiences and contribute your ideas</en>
+    </key>  
+
+    <key name="encuesta10">
+    <es>¿Con qué frecuencia realizas estas actividades?</es>
+    <en>How often do you do these activities?</en>
+    </key>  
+
+    <key name="encuesta11">
+    <es>Describe brevemente por qué te gustan estas actividades.</es>
+    <en>Briefly describe why you like these activities.</en>
+    </key>  
+
+    <key name="encuesta12">
+    <es>Agregar Actividades Nuevas</es>
+    <en>Add New Activities</en>
+    </key>  
+
+    <key name="encuesta13">
+    <es>Nombre de la nueva actividad:</es>
+    <en>Name of the new activity</en>
+    </key>  
+
+    <key name="encuesta14">
+    <es>Agregar Actividad</es>
+    <en>Add Activity</en>
+    </key> 
+
+    <key name="encuesta15">
+    <es>Confirmación de Respuestas</es>
+    <en>Confirmation of Responses</en>
+    </key> 
+
+    <key name="encuesta16">
+    <es>Confirmar Respuestas</es>
+    <en>Confirm Answers</en>
+    </key> 
+
+    <key name="encuesta17">
+    <es>Tus respuestas han enviadas correctamente.</es>
+    <en>Your answers have been sent correctly.</en>
+    </key> 
+
+    <!-- traduccion para Resultados -->
+    <key name="resultados2">
+    <es>Resultados - Actividades Recreativas</es>
+    <en>Results - Recreational Activities</en>
+    </key>
+
+    <key name="resultados3">
+    <es>Estadísticas sobre actividades recreativas</es>
+    <en>Statistics on recreational activities</en>
+    </key>
+
+    <key name="resultados4">
+    <es>Tendencias por edad region y genero</es>
+    <en>Trends by age, region and gender</en>
+    </key>
+
+    <key name="resultados5">
+    <es>Gráficos interactivos</es>
+    <en>Gráficos interactivos</en>
+    </key>
+
+    <key name="resultados6">
+    <es>Comparación entre diferentes tipos de actividades</es>
+    <en>Comparison between different types of activities</en>
+    </key>
+
+    <key name="resultados7">
+    <es>Resultados de Actividades Favoritas</es>
+    <en>Results of Favorite Activities</en>
+    </key>
+
+    <key name="resultados8">
+    <es>Explora estadísticas, tendencias, gráficos interactivos y comparaciones</es>
+    <en>Explore statistics, trends, interactive charts and comparisons</en>
+    </key>
+
+    <key name="resultados9">
+    <es>Estadísticas sobre actividades favoritas</es>
+    <en>Statistics on favorite activities</en>
+    </key>
+
+    <key name="resultados10">
+    <es>Deporte</es>
+    <en>Sport</en>
+    </key>
+
+    <key name="resultados11">
+    <es>El 40% de las personas prefieren actividades deportivas.</es>
+    <en>40% of people prefer sports activities.</en>
+    </key>
+
+    <key name="resultados12">
+    <es>Arte</es>
+    <en>Art</en>
+    </key>
+
+    <key name="resultados13">
+    <es>El 30% disfruta de actividades artísticas y creativas.</es>
+    <en>30% enjoy artistic and creative activities.</en>
+    </key>
+
+    <key name="resultados14">
+    <es>Naturaleza</es>
+    <en>Nature</en>
+    </key>
+
+    <key name="resultados15">
+    <es>El 20% opta por actividades al aire libre</es>
+    <en>20% opt for outdoor activities</en>
+    </key>
+
+    <key name="resultados16">
+    <es>Tendencias por Edad, Región y Género</es>
+    <en>Trends by Age, Region and Gender</en>
+    </key>
+
+    <key name="resultados17">
+    <es>Jóvenes (18-25 años)</es>
+    <en>Youth (18-25 years)</en>
+    </key>
+
+    <key name="resultados18">
+    <es>Este grupo prefiere actividades tecnológicas y deportes extremos. Son usuarios activos de redes sociales y buscan experiencias innovadoras.</es>
+    <en>This group prefers technological activities and extreme sports. They are active users of social networks and seek innovative experiences</en>
+    </key>
+
+    <key name="resultados19">
+    <es>Jóvenes Adultos (26-30 años)</es>
+    <en>Young Adults (26-30 years)</en>
+    </key>
+
+    <key name="resultados20">
+    <es>Los jóvenes adultos tienden a enfocarse en el desarrollo profesional y la estabilidad. Participan en actividades culturales y sociales.</es>
+    <en>Young adults tend to focus on career development and stability. They participate in cultural and social activities.</en>
+    </key>
+
+    <key name="resultados21">
+    <es>Adultos (31-45 años)</es>
+    <en>Adults (31-45 years)</en>
+    </key>
+
+    <key name="resultados22">
+    <es>Este grupo busca equilibrio entre trabajo y vida familiar. Prefieren actividades recreativas que involucren a sus familias.</es>
+    <en>This group seeks balance between work and family life. They prefer recreational activities that involve their families</en>
+    </key>
+
+    <key name="resultados23">
+    <es>Adolescentes (13-17 años)</es>
+    <en>Adolescents (13-17 years)</en>
+    </key>
+
+    <key name="resultados24">
+    <es>Los adolescentes se inclinan hacia deportes de equipo y actividades artísticas. Buscan pertenencia y expresión personal.</es>
+    <en>Teenagers gravitate towards team sports and artistic activities. They seek belonging and personal expression.</en>
+    </key>
+
+    <key name="resultados25">
+    <es>Niños (0-12 años)</es>
+    <en>Children (0-12 years)</en>
+    </key>
+
+    <key name="resultados26">
+    <es>Los niños disfrutan de juegos al aire libre y actividades educativas. La interacción social es fundamental para su desarrollo.</es>
+    <en>Children enjoy outdoor games and educational activities. Social interaction is essential for their development</en>
+    </key>
+
+    <key name="resultados27">
+    <es>Adultos Mayores (60 años y más)</es>
+    <en>Older Adults (60 years and older)</en>
+    </key>
+
+    <key name="resultados28">
+    <es>Este grupo busca actividades recreativas que fomenten la socialización. La salud y el bienestar son prioridades en esta etapa de la vida</es>
+    <en>This group seeks recreational activities that encourage socialization. Health and well-being are priorities at this stage of life</en>
+    </key>
+
+    <key name="resultados29">
+    <es>Tendencias por Región</es>
+    <en>Trends by Region</en>
+    </key>
+
+    <key name="resultados30">
+    <es><strong>América del Norte:</strong> Alta participación de jóvenes en tecnología y deportes; enfoque en la salud mental</es>
+    <en><strong>North America:</strong> High participation of young people in technology and sports; focus on mental health</en>
+    </key>
+
+    <key name="resultados31">
+    <es><strong>América Latina:</strong> Diversidad en preferencias; los jóvenes buscan innovación, mientras que los adultos mayores valoran la comunidad.</es>
+    <en><strong>Latin America:</strong> Diversity in preferences; Young people seek innovation, while older adults value community.</en>
+    </key>
+
+    <key name="resultados32">
+    <es><strong>Europa:</strong> Aumento de la población mayor; se priorizan actividades culturales y recreativas para todas las edades.</es>
+    <en><strong>Europe:</strong> Increase in the elderly population; Cultural and recreational activities are prioritized for all ages.</en>
+    </key>
+
+    <key name="resultados33">
+    <es><strong>Asia:</strong> Crecimiento de la clase media joven; interés por el deporte y la tecnología.</es>
+    <en><strong>Asia:</strong> Growth of the young middle class; interest in sports and technology.</en>
+    </key>
+
+    <key name="resultados333">
+    <es>Por Género</es>
+    <en>By Gender</en>
+    </key>
+
+    <key name="resultados34">
+    <es>Hombres</es>
+    <en>Men</en>
+    </key>
+
+    <key name="resultados35">
+    <es>Mujeres</es>
+    <en>Women</en>
+    </key>
+
+    <key name="resultados36">
+    <es>Neutro</es>
+    <en>Neutral</en>
+    </key>
+
+    <key name="resultados37">
+    <es>Prefieren deportes de equipo o actividades físicas intensas.</es>
+    <en>They prefer team sports or intense physical activities.</en>
+    </key>
+
+    <key name="resultados38">
+    <es>Eligen clases de cocina y actividades de bienestar como pilates.</es>
+    <en>They choose cooking classes and wellness activities like Pilates.</en>
+    </key>
+
+    <key name="resultados39">
+    <es>Opciones compartidas como cine, caminatas o actividades artísticas.</es>
+    <en>Shared options such as cinema, walks or artistic activities.</en>
+    </key>
+
+    <key name="resultados40">
+    <es>Gráficos Interactivos</es>
+    <en>Interactive Charts</en>
+    </key>
+
+    <key name="resultados41">
+    <es>Este gráfico muestra cómo las tendencias han evolucionado mes a mes, destacando picos en actividades específicas durante ciertas temporadas.</es>
+    <en>This graph shows how trends have evolved month by month, highlighting spikes in specific activities during certain seasons.</en>
+    </key>
+
+    <key name="resultados42">
+    <es>Comparación de Actividades Recreativas</es>
+    <en>Comparison of Recreational Activities</en>
+    </key>
+
+    <key name="resultados43">
+    <es>Popularidad por Actividad</es>
+    <en>Popularity by Activity</en>
+    </key>
+
+    <key name="resultados44">
+    <es>Preferencia por Edad</es>
+    <en>Age Preference</en>
+    </key>
+
+<!--traduccion para el submenu contatos-->
+
+    <key name="contacto1">
+    <es>Contactos</es>
+    <en>Contacts</en>
+    </key>
+
+    <key name="contacto2">
+    <es>Formulario de Contacto</es>
+    <en>Contact Form</en>
+    </key>
+
+    <key name="contacto3">
+    <es>Redes Sociales</es>
+    <en>Social networks</en>
+    </key>
+
+    <key name="contacto4">
+    <es>Feedback</es>
+    <en>Feedback</en>
+    </key>
+
+    <key name="contacto5">
+    <es>Atención al Cliente</es>
+    <en>Customer Service</en>
+    </key>
+
+    <key name="contacto6">
+    <es>Redes Sociales</es>
+    <en>Social networks</en>
+    </key>
+
+    <key name="contacto7">
+    <es>¿Tienes alguna duda o consulta? Llena el formulario y nos pondremos en contacto contigo lo antes posible.</es>
+    <en>Do you have any questions or queries? Fill out the form and we will contact you as soon as possible.</en>
+    </key>
+
+    <key name="contacto8">
+    <es>Nombre</es>
+    <en>Name</en>
+    </key>
+
+    <key name="contacto9">
+    <es>Correo Electrónico</es>
+    <en>Email</en>
+    </key>
+
+    <key name="contacto10">
+    <es>Mensaje</es>
+    <en>Message</en>
+    </key>
+
+    <key name="contacto11">
+    <es>Enviar</es>
+    <en>Submit</en>
+    </key>
+
+    <key name="contacto12">
+    <es> Tu mensaje ha sido enviado. Nos comunicaremos contigo lo antes posible.</es>
+    <en>Your message has been sent. We will contact you as soon as possible.</en>
+    </key>
+
+    <key name="contacto14">
+    <es>Tu opinión nos ayuda a mejorar. Califica tu experiencia con nosotros:</es>
+    <en>Your opinion helps us improve. Rate your experience with us:</en>
+    </key>
+
+    <key name="contacto13">
+    <es>Síguenos en nuestras redes sociales y mantente al tanto de nuestras actualizaciones.</es>
+    <en>Follow us on our social networks and stay up to date with our updates.</en>
+    </key>
+
+    <key name="contacto15">
+    <es>😊 Excelente</es>
+    <en>😊 Excellent</en>
+    </key>
+
+    <key name="contacto16">
+    <es>😐 Buena</es>
+    <en>😐 Good</en>
+    </key>
+
+    <key name="contacto17">
+    <es>☹ Mala</es>
+    <en>☹ Bad</en>
+    </key>
+
+    <key name="contacto18">
+    <es>Estamos aquí para ayudarte. Contáctanos a través de cualquiera de los siguientes medios:</es>
+    <en>We are here to help you. Contact us through any of the following means:</en>
+    </key>
+
+    <key name="contacto19">
+    <es><strong>Teléfono:</strong> 2 62 26895</es>
+    <en><strong>Phone:</strong> 2 62 26895</en>
+    </key>
+
+    <key name="contacto20">
+    <es><strong>Correo electronico:</strong> actividades@gmail.com</es>
+    <en><strong>Email:</strong> activities@gmail.com</en>
+    </key>
+
+    <key name="contacto22">
+    <es><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</es>
+    <en><strong>Hours:</strong> Monday to Friday, 9:00 AM - 6:00 PM</en>
+    </key>
+
+    <!-- traduccion para el inicio -->
+    <key name="recomendacion1">
+    <es>Recomendaciones de Actividades</es>
+    <en>Activity Recommendations</en>
+    </key>
+
+    <key name="recomendacion98">
+    <es>Actividades populares según el perfil</es>
+    <en>Popular activities according to profile</en>
+    </key>
+
+    <key name="recomendacion3">
+    <es>Nuevas actividades para probar</es>
+    <en>New activities to try</en>
+    </key>
+
+    <key name="recomendacion4">
+    <es>Enlaces a lugares o eventos locales</es>
+    <en>Links to local places or events</en>
+    </key>
+
+    <key name="recomendacion5">
+    <es>Consejos sobre actividades recreativas</es>
+    <en>Tips on recreational activities</en>
+    </key>
+
+    <key name="recomendacion6">
+    <es>Actividades Populares Según tu Perfil</es>
+    <en>Popular Activities According to Your Profile</en>
+    </key>
+
+    <key name="recomendacion7">
+    <es>Senderismo</es>
+    <en>Hiking</en>
+    </key>
+
+    <key name="recomendacion8">
+    <es>Descubre las mejores rutas para explorar la naturaleza.</es>
+    <en>Discover the best routes to explore nature.</en>
+    </key>
+
+    <key name="recomendacion9">
+    <es>Ver Más</es>
+    <en>See More</en>
+    </key>
+
+    <key name="recomendacion10">
+    <es>Clases de Yoga</es>
+    <en>Yoga classes</en>
+    </key>
+
+    <key name="recomendacion11">
+    <es>Relájate y mejora tu bienestar con estas clases.</es>
+    <en>Relax and improve your well-being with these classes.</en>
+    </key>
+
+    <key name="recomendacion12">
+    <es>Ciclismo</es>
+    <en>Cycling</en>
+    </key>
+
+    <key name="recomendacion13">
+    <es>Recorre las mejores rutas en bicicleta cerca de ti.</es>
+    <en>Explore the best bike routes near you.</en>
+    </key>
+
+    <key name="recomendacion14">
+    <es>Nuevas Actividades para Probar</es>
+    <en>New Activities to Try</en>
+    </key>
+
+    <key name="recomendacion15">
+    <es>Clases de Cocina</es>
+    <en>Cooking Classes</en>
+    </key>
+
+    <key name="recomendacion16">
+    <es>Aprende a preparar platillos deliciosos y explora nuevos sabores.</es>
+    <en>Learn to prepare delicious dishes and explore new flavors.</en>
+    </key>
+
+    <key name="recomendacion17">
+    <es>Yoga</es>
+    <en>Yoga</en>
+    </key>
+
+    <key name="recomendacion18">
+    <es>Relájate y fortalece tu cuerpo con esta actividad beneficiosa.</es>
+    <en>Relax and strengthen your body with this beneficial activity.</en>
+    </key>
+
+    <key name="recomendacion19">
+    <es>Pintura</es>
+    <en>Paint</en>
+    </key>
+
+    <key name="recomendacion20">
+    <es>Descubre tu lado artístico y crea obras únicas.</es>
+    <en>Discover your artistic side and create unique works.</en>
+    </key>
+
+    <key name="recomendacion21">
+    <es>Enlaces a Lugares o Eventos Locales</es>
+    <en>Links to Local Places or Events</en>
+    </key>
+
+    <key name="recomendacion22">
+    <es>Descubre actividades recreativas emocionantes en tu comunidad. ¡Participa, diviértete y conoce nuevas personas!</es>
+    <en>Discover exciting recreational activities in your community. Participate, have fun and meet new people!</en>
+    </key>
+
+    <key name="recomendacion23">
+    <es>Únete a rutas organizadas en la naturaleza o participa en competiciones de ciclismo urbano. ¡Siente la adrenalina mientras exploras nuevos caminos!</es>
+    <en>Join organized routes in nature or participate in urban cycling competitions. Feel the adrenaline while exploring new paths!</en>
+    </key>
+
+    <key name="recomendacion24">
+    <es>Más Información</es>
+    <en>More Information</en>
+    </key>
+
+    <key name="recomendacion25">
+    <es>Relájate y conecta con la naturaleza en nuestras clases de yoga en parques comunitarios. Ideal para todos los niveles.</es>
+    <en>Relax and connect with nature in our yoga classes in community parks. Ideal for all levels.</en>
+    </key>
+
+    <key name="recomendacion26">
+    <es> Disfruta de eventos musicales en plazas o parques, donde la música y la buena compañía se unen para crear momentos inolvidables.</es>
+    <en>Enjoy musical events in squares or parks, where music and good company come together to create unforgettable moments.</en>
+    </key>
+
+    <key name="recomendacion2">
+    <es>Asiste a representaciones teatrales organizadas por grupos locales. Una excelente manera de apoyar el arte en tu comunidad.</es>
+    <en>Attend theater performances organized by local groups. A great way to support art in your community.</en>
+    </key>
+
+    <key name="recomendacion28">
+    <es>Consejos sobre Actividades Recreativas</es>
+    <en>Tips on Recreational Activities</en>
+    </key>
+
+    <key name="recomendacion29">
+    <es>Planifica con Anticipación</es>
+    <en>Plan Ahead</en>
+    </key>
+
+    <key name="recomendacion30">
+    <es>Antes de participar en una actividad recreativa, es fundamental investigar sobre la misma. Conocer las reglas, el lugar y los horarios te ayudará a disfrutar más. Además, asegúrate de preparar todos los materiales necesarios, ya sea equipo deportivo, materiales de arte o cualquier otro recurso. Hacer una lista puede ser útil para no olvidar nada. Si tu actividad es al aire libre, verifica el pronóstico del tiempo para evitar sorpresas desagradables.</es>
+    <en>Before participating in a recreational activity, it is essential to research it. Knowing the rules, the place and the times will help you enjoy yourself more. Also, be sure to prepare all the necessary materials, whether it is sports equipment, art supplies, or any other resources. Making a list can be useful so you don't forget anything. If your activity is outdoors, check the weather forecast to avoid unpleasant surprises.</en>
+    </key>
+
+    <key name="recomendacion31">
+    <es>Invita a tus Amigos</es>
+    <en>Invite your Friends</en>
+    </key>
+
+    <key name="recomendacion32">
+    <es>Las actividades recreativas son mucho más divertidas cuando se comparten con amigos. Invitar a otros puede hacer que la experiencia sea más enriquecedora y memorable. Considera formar grupos para actividades como senderismo, ciclismo o deportes de equipo. Esto no solo hace la actividad más divertida, sino que también fomenta el trabajo en equipo. Si tienes un grupo de amigos que disfrutan de actividades similares, planifica reuniones regulares para mantener la diversión y la conexión.</es>
+    <en>Recreational activities are much more fun when shared with friends. Inviting others can make the experience more enriching and memorable. Consider forming groups for activities such as hiking, biking, or team sports. This not only makes the activity more fun, but also encourages teamwork. If you have a group of friends who enjoy similar activities, plan regular get-togethers to keep things fun and connected.</en>
+    </key>
+
+    <key name="recomendacion33">
+    <es>Mantén una Actitud Positiva</es>
+    <en>Maintain a Positive Attitude</en>
+    </key>
+
+    <key name="recomendacion34">
+    <es>Es importante disfrutar del proceso y no enfocarse únicamente en el resultado. La diversión está en el viaje, no solo en la meta. Además, mantén una actitud abierta y flexible ante los cambios o imprevistos que puedan surgir durante la actividad.</es>
+    <en>It is important to enjoy the process and not focus solely on the result. The fun is in the journey, not just in the finish line. In addition, maintain an open and flexible attitude to changes or unforeseen events that may arise during the activity.</en>
+    </key>
+
+    <key name="recomendacion27">
+    <es></es>
+    <en></en>
+    </key>
+</traslations>

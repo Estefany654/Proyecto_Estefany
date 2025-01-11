@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="inititulo" >Inicio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery para simplificar -->
+    <script src="https://unpkg.com/i18next@21.6.3/i18next.min.js"></script> <!-- i18next -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body {
+            background-color: #1a202c;
+            color: #edf2f7;
+            background-image: url('imagenes/fondo.jpg'); ;
+        }
+        .navbar {
+            background-color: #24465c;
+            color: black;
+        }
+        .hero-section {
+            background: linear-gradient(to right, #2b6cb0, #2c5282);
+            color: #edf2f7;
+        }
+        .section-dark {
+            background-color: #0b1018;
+        }                                                                                                                                   
+        
+        /* Footer */
+        footer {
+            background-color: #061018;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
+        .btn-primary-custom {
+            background-color: #2b6cb0;
+            border-color: #2b6cb0;
+        }
+        .btn-primary-custom:hover {
+            background-color: #2c5282;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+        <div class="container-fluid">
+            <a href="index.html" class="btn btn-link text-white">
+                <i class="bi bi-arrow-left"></i>
+            </a>
+    
+            <a class="navbar-brand" href="#">RecreaPlus</a>
+<!-- Selector de idioma -->
+        <div class="flex justify-center mt-2">
+          <select id="language-selector" class="px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-700 font-medium text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+              <option value="es" selected>Español</option>
+              <option value="en">English</option>  
+          </select>
+        </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" data-i18n="ini_ini" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" data-i18n="ini_des" href="#descripcion">Descripción del proyecto</a></li>
+                    <li class="nav-item"><a class="nav-link" data-i18n="ini_bene" href="#beneficios">Beneficios de participar</a></li>
+                    <li class="nav-item"><a class="nav-link" data-i18n="ini_preg" href="#preguntas">Preguntas frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link" data-i18n="ini_ins" href="#instrucciones">Instrucciones de participacion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+      <!--scrip para la internalizacion del contenido-->
+    <script>
+        //Función para cargar el archivo XML -->
+        function loadTranslations(language) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "intermacional.xml", true);
+            xhr.onreadystatechange = function () {
+             if (xhr.readyState === 4 && xhr.status === 200) {
+                var parser = new DOMParser();
+                var xmlDoc = parser.parseFromString(xhr.responseText, "application/xml");
+   
+                var translations = {};
+                var keys = xmlDoc.getElementsByTagName("key");
+                for (var i = 0; i < keys.length; i++) {
+                    var name = keys[i].getAttribute("name");
+                    var value = keys[i].getElementsByTagName(language)[0].textContent;
+                    translations[name] = value;
+                }
+   
+            i18next.init(
+               {
+                 lng: language,
+                 resources: {
+                   [language]: {
+                     translation: translations,
+                   },
+                 },
+               },
+               function (err, t) {
+                    document.querySelectorAll("[data-i18n]").forEach(function (element) {
+                    element.innerHTML = t(element.getAttribute("data-i18n"));
+                     });
+                }
+                );
+             }
+            };
+            xhr.send();
+        }   
+   
+       // Cambiar idioma con el selector
+       document.getElementById("language-selector").addEventListener("change", function () {
+         loadTranslations(this.value);
+       });
+   
+       // Idioma predeterminado al cargar la página
+       window.onload = function () {
+         loadTranslations("es");
+       };
+    </script>
+
+    <!-- Contenido principal -->
+    <main class="container mt-5">
+        <!-- Inicio -->
+        <section id="inicio" class="text-center py-5">
+            <img src="imagenes/natacion.jpg" alt="Actividades Recreativas" class="rounded shadow-lg img-fluid mx-auto d-block">
+            
+            <h2 class="text-3xl font-bold mt-4" data-i18n="ini_inicio1">Únete a nuestra comunidad recreativa</h2>
+            <p class="text-lg mt-3" data-i18n="ini_inicio2" >
+                Nuestra plataforma está diseñada para unir a personas que valoran el tiempo libre y el bienestar. Descubre actividades emocionantes, participa en eventos locales y encuentra inspiración para vivir una vida más enriquecedora.
+            </p>
+        </section>
+
+        <!-- Descripción del proyecto -->
+        <section id="descripcion" class="section-dark py-5 rounded" >
+            <h2 class="text-2xl font-bold text-center mb-4" data-i18n="ini_inicio3">Descripción del Proyecto</h2>
+            <p class="text-lg text-center" data-i18n="ini_inicio4">
+                RecreAct nace de la pasión por la recreación y el impacto positivo que tiene en nuestras vidas. En este espacio, promovemos actividades que refuercen la creatividad, fomenten la interacción social y reduzcan el estrés cotidiano.
+            </p>
+            <ul class="list-disc list-inside mt-4">
+                <li data-i18n="ini_inicio5">Aprende nuevas habilidades mientras te diviertes.</li>
+                <li data-i18n="ini_inicio6">Participa en desafíos, talleres y eventos grupales.</li>
+                <li data-i18n="ini_inicio7">Explora actividades personalizadas según tus intereses.</li>
+            </ul>
+            <div class="text-center mt-4">
+                <img src="imagenes/correr.webp" alt="Actividades Recreativas" class="rounded shadow-lg img-fluid mx-auto d-block">
+            </div>
+        </section>
+
+        <!-- Beneficios de participar -->
+        <section id="beneficios" class="py-5">
+            <h2 class="text-2xl font-bold text-center mb-4" data-i18n="bene1">Beneficios de Participar</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="imagenes/ajedrez.webp" alt="Actividades Recreativas" class="rounded-circle shadow-lg img-fluid mx-auto d-block">
+
+                    <h3 class="text-lg font-bold mt-3" data-i18n="bene2">Conexión</h3>
+                    <p data-i18n="bene3">
+                        Forma parte de una red de personas apasionadas por el bienestar y la diversión. Comparte experiencias y crea nuevas amistades.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="imagenes/exploracion.jpeg" alt="Exploración" class="rounded-circle shadow-lg">
+                    <h3 class="text-lg font-bold mt-3" data-i18n="bene4">Exploración</h3>
+                    <p data-i18n="bene5">
+                        Atrévete a probar cosas nuevas. Desde deportes hasta actividades artísticas, elige aquello que te llene de alegría.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="imagenes/diversion.jpg" height="250px" alt="Diversión" class="rounded-circle shadow-lg">
+                    <h3 class="text-lg font-bold mt-3" data-i18n="bene6">Diversión</h3>
+                    <p data-i18n="bene7">
+                        Disfruta de momentos inolvidables en un ambiente relajado. Haz de tu tiempo libre algo realmente valioso.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preguntas frecuentes -->
+        <section id="preguntas" class="section-dark py-5 rounded">
+            <h2 class="text-2xl font-bold text-center mb-4" data-i18n="preg1">Preguntas Frecuentes</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item bg-dark text-white">
+                    <h2 class="accordion-header" id="faq1">
+                        <button data-i18n="preg2" class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                            ¿Es gratuito participar?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body" data-i18n="preg3">
+                            Sí, todas las actividades son completamente gratuitas y están abiertas a todos los interesados.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark text-white">
+                    <h2 class="accordion-header" id="faq2">
+                        <button data-i18n="preg4" class="accordion-button bg-dark text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            ¿Necesito experiencia previa?
+                        </button>
+                    </h2>
+                    <div id="collapse2"  class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                        <div data-i18n="preg5" class="accordion-body">
+                            No, nuestras actividades están diseñadas para todas las edades y niveles de experiencia.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instrucciones -->
+        <section id="instrucciones" class="text-center py-5">
+            <h2 class="text-2xl font-bold mb-4" data-i18n="ini_ins">Instrucciones de Participación</h2>
+            <ul class="list-decimal list-inside text-lg">
+                <li data-i18n="inst2">Regístrate gratuitamente en nuestra plataforma utilizando tu correo.</li>
+                <li data-i18n="inst3">Explora nuestro catálogo de actividades y elige las que más te interesen.</li>
+                <li data-i18n="inst4">Asiste a los eventos en línea o en tu localidad.</li>
+                <li data-i18n="inst5">Comparte tus experiencias y contribuye con tus ideas.</li>
+            </ul>
+            <div class="text-center mt-4">
+                <img src="imagenes/libros.jpeg" alt="Instrucciones" class="rounded shadow-lg">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p data-i18n="footer"> 2025 RecreaPlus | Todos los derechos reservados.</p>
+        <p><a href="mailto:contacto@recreaplus.com" style="color: white;">estefanyMamani@recreaplus.com</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

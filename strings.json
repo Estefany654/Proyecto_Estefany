@@ -1,0 +1,83 @@
+{
+    "es": {
+      "navbar": {
+        "home": "RecreaPlus",
+        "description": "Descripción del Proyecto",
+        "benefits": "Beneficios",
+        "faq": "Preguntas Frecuentes",
+        "instructions": "Instrucciones"
+      },
+      "hero": {
+        "title": "Bienvenidos a RecreaPlus",
+        "subtitle": "Tu plataforma para descubrir, participar y disfrutar de las mejores actividades recreativas"
+      },
+      "description": {
+        "title": "¿Qué es RecreaPlus?",
+        "subtitle": "Resumen del Proyecto",
+        "paragraph1": "RecreaPlus es una plataforma diseñada para recopilar y analizar las actividades recreativas preferidas por la comunidad.",
+        "paragraph2": "Participando en nuestra encuesta podrás obtener recomendaciones personalizadas y contribuir al desarrollo de eventos recreativos en tu área."
+      },
+      "benefits": {
+        "title": "Beneficios de Participar",
+        "cards": [
+          {
+            "title": "Accede a Recomendaciones",
+            "content": "Recibe sugerencias personalizadas basadas en tus preferencias recreativas y descubre nuevas actividades que disfrutarás."
+          },
+          {
+            "title": "Eventos Locales",
+            "content": "Conoce eventos recreativos cercanos a tu ubicación y participa en ellos, mejorando tu calidad de vida."
+          },
+          {
+            "title": "Contribuye a la Comunidad",
+            "content": "Ayuda a mejorar las actividades recreativas a nivel local y global, formando parte activa de nuestra plataforma."
+          }
+        ]
+      },
+      "footer": {
+        "copyright": "© 2025 RecreaPlus",
+        "contact": "contacto@recreaplus.com"
+      }
+    },
+    "en": {
+      "navbar": {
+        "home": "RecreaPlus",
+        "description": "Project Description",
+        "benefits": "Benefits",
+        "faq": "Frequently Asked Questions",
+        "instructions": "Instructions"
+      },
+      "hero": {
+        "title": "Welcome to RecreaPlus",
+        "subtitle": "Your platform to discover, participate, and enjoy the best recreational activities"
+      },
+      "description": {
+        "title": "What is RecreaPlus?",
+        "subtitle": "Project Summary",
+        "paragraph1": "RecreaPlus is a platform designed to collect and analyze the community's preferred recreational activities.",
+        "paragraph2": "By participating in our survey, you can receive personalized recommendations and contribute to the development of recreational events in your area."
+      },
+      "benefits": {
+        "title": "Benefits of Participating",
+        "cards": [
+          {
+            "title": "Access Recommendations",
+            "content": "Receive personalized suggestions based on your recreational preferences and discover new activities to enjoy."
+          },
+          {
+            "title": "Local Events",
+            "content": "Learn about recreational events near you and participate to improve your quality of life."
+          },
+          {
+            "title": "Contribute to the Community",
+            "content": "Help improve recreational activities locally and globally by being an active part of our platform."
+          }
+        ]
+      },
+      "footer": {
+        "copyright": "© 2025 RecreaPlus",
+        "contact": "contact@recreaplus.com"
+      }
+    }
+  }
+  

@@ -1,0 +1,20 @@
+{
+    "actividades": [
+      "Deportes",
+      "Arte",
+      "Música",
+      "Cocina",
+      "Viajes",
+      "Senderismo",
+      "Camping","Fotografia", "Ciclismo","Ver peliculas y series",
+      "Meditacion", "Yoga","Coleccionismo"
+    ],
+    "frecuencias": [
+      "Diariamente",
+      "Semanalmente",
+      "Mensualmente",
+      "Ocasionalmente"
+    ],
+    "nuevasActividades": []
+  }
+  
